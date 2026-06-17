@@ -86,10 +86,16 @@ Follow these steps to run the project locally.
 ```
 
 ## 🔒 Authentication Flows
-- **Admin Login**: `/admin/login`
-  - **Email**: `admin123@gmail.com`
-  - **Password**: `12345678`
-- **Retailer Login**: `/login` (Default landing page)
+
+**1. Admin (Wholesaler) Login**
+- **URL Path**: `/admin/login`
+- **Test Email**: `admin123@gmail.com`
+- **Test Password**: `12345678`
+
+**2. Retailer Login**
+- **URL Path**: `/login` (This is the default landing page)
+- **Test Email**: `retailer@gmail.com`
+- **Test Password**: `12345678`
 
 ---
 *Built to empower business efficiency and scalable growth.*
