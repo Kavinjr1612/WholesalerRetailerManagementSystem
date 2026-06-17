@@ -87,6 +87,8 @@ Follow these steps to run the project locally.
 
 ## 🔒 Authentication Flows
 - **Admin Login**: `/admin/login`
+  - **Email**: `admin123@gmail.com`
+  - **Password**: `12345678`
 - **Retailer Login**: `/login` (Default landing page)
 
 ---
