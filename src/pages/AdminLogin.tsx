@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { User, AlertCircle, Lock, Mail, ArrowLeft, Eye, EyeOff } from 'lucide-react';
 import { sendEmail } from '../lib/emailService';
@@ -205,6 +205,12 @@ const AdminLogin: React.FC = () => {
               </div>
             )}
 
+            <div className="mb-6 p-4 rounded-md bg-emerald-900/40 border border-emerald-500/30">
+              <h3 className="text-emerald-300 font-semibold mb-2 text-sm uppercase tracking-wider">Demo Credentials</h3>
+              <p className="text-gray-300 text-sm mb-1"><span className="text-gray-400">Email:</span> admin123@gmail.com</p>
+              <p className="text-gray-300 text-sm"><span className="text-gray-400">Password:</span> 12345678</p>
+            </div>
+
             <form onSubmit={handleLogin} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-200 mb-2">
@@ -268,6 +274,12 @@ const AdminLogin: React.FC = () => {
                   'Sign In'
                 )}
               </button>
+
+              <div className="mt-6 text-center">
+                <Link to="/login" className="text-sm text-emerald-400 hover:text-emerald-300 hover:underline transition-colors">
+                  Are you a retailer? Login here &rarr;
+                </Link>
+              </div>
             </form>
           </>
         )}
