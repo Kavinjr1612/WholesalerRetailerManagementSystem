@@ -124,7 +124,7 @@ const Sidebar: React.FC = () => {
       onMouseLeave={handleMouseLeave}
     >
       <div className="flex items-center p-4 border-b border-gray-200 dark:border-gray-700">
-        <Candy size={24} className="text-indigo-600" />
+        <Candy size={24} className="text-blue-600" />
         {!collapsed && <span className="ml-2 font-bold text-lg">{shopName}</span>}
       </div>
       
@@ -137,7 +137,7 @@ const Sidebar: React.FC = () => {
                 className={({ isActive }) => 
                   `flex items-center p-3 ${collapsed ? 'justify-center' : 'px-4'} ${
                     isActive 
-                      ? `${isDarkMode ? 'bg-gray-800' : 'bg-indigo-50'} text-indigo-600` 
+                      ? `${isDarkMode ? 'bg-gray-800' : 'bg-blue-50'} text-blue-600` 
                       : `${isDarkMode ? 'text-gray-400 hover:bg-gray-800' : 'text-gray-600 hover:bg-gray-100'}`
                   } rounded-lg transition-colors`
                 }
@@ -157,7 +157,7 @@ const Sidebar: React.FC = () => {
                 className={({ isActive }) => 
                   `flex items-center p-3 ${collapsed ? 'justify-center' : 'px-4'} ${
                     isActive 
-                      ? `${isDarkMode ? 'bg-gray-800' : 'bg-indigo-50'} text-indigo-600` 
+                      ? `${isDarkMode ? 'bg-gray-800' : 'bg-blue-50'} text-blue-600` 
                       : `${isDarkMode ? 'text-gray-400 hover:bg-gray-800' : 'text-gray-600 hover:bg-gray-100'}`
                   } rounded-lg transition-colors`
                 }
@@ -181,7 +181,7 @@ const Sidebar: React.FC = () => {
           title={isLocked ? "Unlock sidebar" : "Lock sidebar"}
         >
           {isLocked ? (
-            <Lock size={16} className={`${isDarkMode ? 'text-indigo-400' : 'text-indigo-600'}`} />
+            <Lock size={16} className={`${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
           ) : (
             <Unlock size={16} className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`} />
           )}

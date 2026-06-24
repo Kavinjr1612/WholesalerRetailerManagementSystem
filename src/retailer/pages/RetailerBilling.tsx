@@ -497,7 +497,7 @@ const handleDownloadReceipt = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-full">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
       </div>
     );
   }
@@ -559,7 +559,7 @@ const handleDownloadReceipt = () => {
               </button>
               <button
                 onClick={handleCheckout}
-                className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md"
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md"
               >
                 Confirm & Print
               </button>
@@ -631,7 +631,7 @@ const handleDownloadReceipt = () => {
                           <div className="flex-1">
                             <div className="flex justify-between">
                               <h3 className="font-medium">{product.name}</h3>
-                              <span className="font-bold text-indigo-600">₹{product.price.toFixed(2)}</span>
+                              <span className="font-bold text-blue-600">₹{product.price.toFixed(2)}</span>
                             </div>
                             <p className={`text-sm mt-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                               {product.description || 'No description available'}
@@ -641,7 +641,7 @@ const handleDownloadReceipt = () => {
                             </p>
                             <button
                               onClick={() => addToCart(product)}
-                              className="mt-2 w-full py-1 px-3 rounded bg-indigo-600 hover:bg-indigo-700 text-white flex items-center justify-center"
+                              className="mt-2 w-full py-1 px-3 rounded bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center"
                             >
                               <Plus size={16} className="mr-2" />
                               Add to Cart
@@ -728,7 +728,7 @@ const handleDownloadReceipt = () => {
 
                       <button
                         onClick={() => setShowBillingModal(true)}
-                        className="w-full py-2 bg-green-600 hover:bg-green-700 text-white rounded-md flex items-center justify-center"
+                        className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md flex items-center justify-center"
                       >
                         <ShoppingCart size={20} className="mr-2" />
                         Complete Billing
@@ -914,7 +914,7 @@ const handleDownloadReceipt = () => {
                   handleDownloadReceipt();
                   setShowDatePicker(false);
                 }}
-                className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md"
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md"
               >
                 Generate Report
               </button>

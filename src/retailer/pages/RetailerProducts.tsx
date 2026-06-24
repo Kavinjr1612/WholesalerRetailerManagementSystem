@@ -233,7 +233,7 @@ const RetailerProducts: React.FC = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-full">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
       </div>
     );
   }
@@ -273,7 +273,7 @@ const RetailerProducts: React.FC = () => {
               <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Products</p>
               <h3 className="text-2xl font-bold">{retailerProducts.length}</h3>
             </div>
-            <div className="p-3 rounded-full bg-indigo-100 text-indigo-600">
+            <div className="p-3 rounded-full bg-blue-100 text-blue-600">
               <Package size={24} />
             </div>
           </div>
@@ -470,7 +470,7 @@ const RetailerProducts: React.FC = () => {
                 <tfoot>
                   <tr className={`font-bold ${isDarkMode ? 'bg-gray-600' : 'bg-gray-100'}`}>
                     <td colSpan={2} className="py-4 px-4 text-right">Total Profit:</td>
-                    <td className="py-4 px-4 text-right text-lg text-indigo-600">
+                    <td className="py-4 px-4 text-right text-lg text-blue-600">
                       ₹{profitData.reduce((sum, item) => sum + item.totalProfit, 0).toLocaleString()}
                     </td>
                   </tr>

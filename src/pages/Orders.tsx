@@ -599,7 +599,7 @@ ${itemsContent}
         <h1 className="text-2xl font-bold">Orders Management</h1>
         <button 
           onClick={() => openOrderModal()}
-          className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg flex items-center"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center"
         >
           <Plus size={18} className="mr-1" />
           New Order
@@ -613,7 +613,7 @@ ${itemsContent}
               <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Total Orders</p>
               <h3 className="text-2xl font-bold">{orderStats.total}</h3>
             </div>
-            <div className="p-2 rounded-full bg-indigo-100 text-indigo-600">
+            <div className="p-2 rounded-full bg-blue-100 text-blue-600">
               <PackageCheck size={20} />
             </div>
           </div>
@@ -739,7 +739,7 @@ ${itemsContent}
             onClick={() => setActiveTab('requests')}
             className={`py-4 px-6 font-medium text-sm border-b-2 ${
               activeTab === 'requests'
-                ? `${isDarkMode ? 'border-indigo-500 text-indigo-400' : 'border-indigo-500 text-indigo-600'}`
+                ? `${isDarkMode ? 'border-blue-500 text-blue-400' : 'border-blue-500 text-blue-600'}`
                 : `${isDarkMode ? 'border-transparent text-gray-400 hover:text-gray-300' : 'border-transparent text-gray-500 hover:text-gray-700'}`
             }`}
           >
@@ -750,7 +750,7 @@ ${itemsContent}
             onClick={() => setActiveTab('shipments')}
             className={`py-4 px-6 font-medium text-sm border-b-2 ${
               activeTab === 'shipments'
-                ? `${isDarkMode ? 'border-indigo-500 text-indigo-400' : 'border-indigo-500 text-indigo-600'}`
+                ? `${isDarkMode ? 'border-blue-500 text-blue-400' : 'border-blue-500 text-blue-600'}`
                 : `${isDarkMode ? 'border-transparent text-gray-400 hover:text-gray-300' : 'border-transparent text-gray-500 hover:text-gray-700'}`
             }`}
           >
@@ -761,7 +761,7 @@ ${itemsContent}
             onClick={() => setActiveTab('history')}
             className={`py-4 px-6 font-medium text-sm border-b-2 ${
               activeTab === 'history'
-                ? `${isDarkMode ? 'border-indigo-500 text-indigo-400' : 'border-indigo-500 text-indigo-600'}`
+                ? `${isDarkMode ? 'border-blue-500 text-blue-400' : 'border-blue-500 text-blue-600'}`
                 : `${isDarkMode ? 'border-transparent text-gray-400 hover:text-gray-300' : 'border-transparent text-gray-500 hover:text-gray-700'}`
             }`}
           >
@@ -772,7 +772,7 @@ ${itemsContent}
             onClick={() => setActiveTab('summary')}
             className={`py-4 px-6 font-medium text-sm border-b-2 ${
               activeTab === 'summary'
-                ? `${isDarkMode ? 'border-indigo-500 text-indigo-400' : 'border-indigo-500 text-indigo-600'}`
+                ? `${isDarkMode ? 'border-blue-500 text-blue-400' : 'border-blue-500 text-blue-600'}`
                 : `${isDarkMode ? 'border-transparent text-gray-400 hover:text-gray-300' : 'border-transparent text-gray-500 hover:text-gray-700'}`
             }`}
           >
@@ -802,7 +802,7 @@ ${itemsContent}
                     <tr>
                       <td colSpan={6} className="px-6 py-4 text-center">
                         <div className="flex justify-center">
-                          <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-indigo-500"></div>
+                          <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
                         </div>
                       </td>
                     </tr>
@@ -824,14 +824,14 @@ ${itemsContent}
                         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                           <button 
                             onClick={() => updateOrderStatus(order.id, 'processing')}
-                            className="text-indigo-600 hover:text-indigo-900 dark:hover:text-indigo-400 mr-3"
+                            className="text-blue-600 hover:text-blue-900 dark:hover:text-blue-400 mr-3"
                             title="Process Order"
                           >
                             <PackageCheck size={18} />
                           </button>
                           <button 
                             onClick={() => openOrderModal(order)}
-                            className="text-indigo-600 hover:text-indigo-900 dark:hover:text-indigo-400 mr-3"
+                            className="text-blue-600 hover:text-blue-900 dark:hover:text-blue-400 mr-3"
                             title="Edit Order"
                           >
                             <Edit size={18} />
@@ -884,7 +884,7 @@ ${itemsContent}
                     <tr>
                       <td colSpan={6} className="px-6 py-4 text-center">
                         <div className="flex justify-center">
-                          <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-indigo-500"></div>
+                          <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
                         </div>
                       </td>
                     </tr>
@@ -926,7 +926,7 @@ ${itemsContent}
                           )}
                           <button 
                             onClick={() => openOrderModal(order)}
-                            className="text-indigo-600 hover:text-indigo-900 dark:hover:text-indigo-400 mr-3"
+                            className="text-blue-600 hover:text-blue-900 dark:hover:text-blue-400 mr-3"
                             title="Edit Order"
                           >
                             <Edit size={18} />
@@ -982,7 +982,7 @@ ${itemsContent}
                     <tr>
                       <td colSpan={6} className="px-6 py-4 text-center">
                         <div className="flex justify-center">
-                          <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-indigo-500"></div>
+                          <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
                         </div>
                       </td>
                     </tr>
@@ -1085,7 +1085,7 @@ ${itemsContent}
                       <span className="text-sm font-medium">{orderStats.completed}</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
-                      <div className="bg-green-500 h-2.5 rounded-full" style={{ width: `${(orderStats.completed / orderStats.total) * 100}%` }}></div>
+                      <div className="bg-blue-500 h-2.5 rounded-full" style={{ width: `${(orderStats.completed / orderStats.total) * 100}%` }}></div>
                     </div>
                   </div>
                 </div>
@@ -1099,7 +1099,7 @@ ${itemsContent}
               <div className="p-6">
                 {loading ? (
                   <div className="flex justify-center py-8">
-                    <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-indigo-500"></div>
+                    <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
                   </div>
                 ) : (
                   <div className="space-y-4">
@@ -1224,7 +1224,7 @@ ${itemsContent}
                             <button
                               type="button"
                               onClick={addOrderItem}
-                              className="text-indigo-600 hover:text-indigo-900 text-sm flex items-center"
+                              className="text-blue-600 hover:text-blue-900 text-sm flex items-center"
                             >
                               <Plus size={16} className="mr-1" />
                               Add Item
@@ -1328,7 +1328,7 @@ ${itemsContent}
                         <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
                           <button
                             type="submit"
-                            className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm"
+                            className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm"
                           >
                             {isEditing ? 'Update Order' : 'Create Order'}
                           </button>
@@ -1491,7 +1491,7 @@ ${itemsContent}
                 <button
                   type="button"
                   onClick={() => downloadOrderReport(currentOrder)}
-                  className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm"
+                  className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm"
                 >
                   <Download size={16} className="mr-2" />
                   Download Report

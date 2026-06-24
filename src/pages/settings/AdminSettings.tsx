@@ -85,7 +85,7 @@ const AdminSettings: React.FC = () => {
           onClick={() => toggleSection('shop')}
         >
           <div className="flex items-center">
-            <Store size={20} className="mr-3 text-indigo-600" />
+            <Store size={20} className="mr-3 text-blue-600" />
             <span className="font-semibold">Shop Settings</span>
           </div>
           {expandedSection === 'shop' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -113,7 +113,7 @@ const AdminSettings: React.FC = () => {
                       />
                       <button
                         onClick={handleShopNameUpdate}
-                        className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
+                        className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
                       >
                         Save
                       </button>
@@ -134,7 +134,7 @@ const AdminSettings: React.FC = () => {
                       </span>
                       <button
                         onClick={() => setIsEditing(true)}
-                        className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+                        className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
                       >
                         Edit
                       </button>

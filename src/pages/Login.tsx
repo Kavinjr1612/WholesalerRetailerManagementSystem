@@ -84,7 +84,7 @@ const Login: React.FC = () => {
       } rounded-lg shadow-lg p-8`}>
         <div className="flex justify-center mb-8">
           <div className="flex items-center">
-            <Candy size={40} className="text-indigo-600" />
+            <Candy size={40} className="text-blue-600" />
             <span className={`ml-3 text-2xl font-bold ${
               isDarkMode ? 'text-white' : 'text-gray-900'
             }`}>
@@ -120,7 +120,7 @@ const Login: React.FC = () => {
                 isDarkMode 
                   ? 'bg-gray-700 border-gray-600 text-white' 
                   : 'border-gray-300 text-gray-900'
-              } border focus:ring-indigo-500 focus:border-indigo-500`}
+              } border focus:ring-blue-500 focus:border-blue-500`}
             />
           </div>
 
@@ -139,14 +139,14 @@ const Login: React.FC = () => {
                 isDarkMode 
                   ? 'bg-gray-700 border-gray-600 text-white' 
                   : 'border-gray-300 text-gray-900'
-              } border focus:ring-indigo-500 focus:border-indigo-500`}
+              } border focus:ring-blue-500 focus:border-blue-500`}
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${
+            className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
               loading ? 'opacity-75 cursor-not-allowed' : ''
             }`}
           >

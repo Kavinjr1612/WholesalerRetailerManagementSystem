@@ -270,7 +270,7 @@ const Retailers: React.FC = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-full">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
       </div>
     );
   }
@@ -303,7 +303,7 @@ const Retailers: React.FC = () => {
         </div>
         <button
           onClick={() => setShowAddModal(true)}
-          className="flex items-center bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+          className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
         >
           <Plus size={18} className="mr-2" />
           Add Retailer
@@ -366,7 +366,7 @@ const Retailers: React.FC = () => {
         <button
           onClick={() => setPage(prev => Math.max(prev - 1, 1))}
           disabled={page === 1}
-          className="flex items-center bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 disabled:opacity-50"
+          className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50"
         >
           <ChevronLeft size={18} className="mr-2" />
           Previous
@@ -375,7 +375,7 @@ const Retailers: React.FC = () => {
         <button
           onClick={() => setPage(prev => prev + 1)}
           disabled={page === totalPages}
-          className="flex items-center bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 disabled:opacity-50"
+          className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50"
         >
           Next
           <ChevronRight size={18} className="ml-2" />
@@ -466,7 +466,7 @@ const Retailers: React.FC = () => {
                 </button>
                 <button
                   type="submit"
-                  className={`px-4 py-2 rounded-lg text-white ${isEditing ? 'bg-green-600 hover:bg-green-700' : 'bg-indigo-600 hover:bg-indigo-700'}`}
+                  className={`px-4 py-2 rounded-lg text-white ${isEditing ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-600 hover:bg-blue-700'}`}
                 >
                   {isEditing ? 'Save Changes' : 'Add Retailer'}
                 </button>

@@ -188,7 +188,7 @@ const Products: React.FC = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-full">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
       </div>
     );
   }
@@ -199,7 +199,7 @@ const Products: React.FC = () => {
         <h1 className="text-2xl font-bold">Products</h1>
         <button
           onClick={() => setShowModal(true)}
-          className="flex items-center bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg"
+          className="flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
         >
           <Plus size={18} className="mr-2" />
           Add Product
@@ -298,7 +298,7 @@ const Products: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <span className="font-bold text-indigo-600">₹{product.price.toFixed(2)}</span>
+                <span className="font-bold text-blue-600">₹{product.price.toFixed(2)}</span>
               </div>
               <p className={`mt-2 text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} line-clamp-2`}>
                 {product.description || 'No description available'}
@@ -472,7 +472,7 @@ const Products: React.FC = () => {
               <button
                 type="submit"
                 className={`px-4 py-2 rounded-md text-white ${
-                  currentProduct ? 'bg-green-600 hover:bg-green-700' : 'bg-indigo-600 hover:bg-indigo-700'
+                  currentProduct ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-600 hover:bg-blue-700'
                 }`}
               >
                 {currentProduct ? 'Save Changes' : 'Add Product'}

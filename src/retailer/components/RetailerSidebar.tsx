@@ -98,7 +98,7 @@ const Sidebar: React.FC = () => {
       onMouseLeave={handleMouseLeave}
     >
       <div className={`flex items-center p-4 ${isDarkMode ? 'border-gray-700/50' : 'border-gray-200/50'} border-b`}>
-        <div className="w-8 h-8 rounded-full bg-emerald-600/20 flex items-center justify-center overflow-hidden">
+        <div className="w-8 h-8 rounded-full bg-blue-600/20 flex items-center justify-center overflow-hidden">
           <img 
             src="/images/logo.png"
             alt="Logo"
@@ -117,7 +117,7 @@ const Sidebar: React.FC = () => {
                 className={({ isActive }) => 
                   `flex items-center p-3 ${collapsed ? 'justify-center' : 'px-4'} ${
                     isActive 
-                      ? `${isDarkMode ? 'bg-gray-800' : 'bg-indigo-50'} text-indigo-600` 
+                      ? `${isDarkMode ? 'bg-gray-800' : 'bg-blue-50'} text-blue-600` 
                       : `${isDarkMode ? 'text-gray-400 hover:bg-gray-800' : 'text-gray-600 hover:bg-gray-100'}`
                   } rounded-lg transition-colors`
                 }
@@ -141,7 +141,7 @@ const Sidebar: React.FC = () => {
           title={isLocked ? "Unlock sidebar" : "Lock sidebar"}
         >
           {isLocked ? (
-            <Lock size={16} className={`${isDarkMode ? 'text-indigo-400' : 'text-indigo-600'}`} />
+            <Lock size={16} className={`${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
           ) : (
             <Unlock size={16} className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`} />
           )}

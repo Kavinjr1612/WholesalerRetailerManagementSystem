@@ -119,7 +119,7 @@ const RetailerSettings: React.FC = () => {
           onClick={() => toggleSection('appearance')}
         >
           <div className="flex items-center">
-            <Palette size={20} className="mr-3 text-indigo-600" />
+            <Palette size={20} className="mr-3 text-blue-600" />
             <span className="font-semibold">Appearance</span>
           </div>
           {expandedSection === 'appearance' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -191,7 +191,7 @@ const RetailerSettings: React.FC = () => {
           onClick={() => toggleSection('account')}
         >
           <div className="flex items-center">
-            <User size={20} className="mr-3 text-indigo-600" />
+            <User size={20} className="mr-3 text-blue-600" />
             <span className="font-semibold">Account</span>
           </div>
           {expandedSection === 'account' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -310,8 +310,8 @@ const RetailerSettings: React.FC = () => {
                   onClick={handlePasswordResetRequest}
                   className={`flex items-center px-4 py-2 rounded-md ${
                     isDarkMode 
-                      ? 'bg-indigo-600 hover:bg-indigo-700' 
-                      : 'bg-indigo-600 hover:bg-indigo-700'
+                      ? 'bg-blue-600 hover:bg-blue-700' 
+                      : 'bg-blue-600 hover:bg-blue-700'
                   } text-white`}
                 >
                   <Send size={16} className="mr-2" />
@@ -338,7 +338,7 @@ const RetailerSettings: React.FC = () => {
           onClick={() => toggleSection('notifications')}
         >
           <div className="flex items-center">
-            <Bell size={20} className="mr-3 text-indigo-600" />
+            <Bell size={20} className="mr-3 text-blue-600" />
             <span className="font-semibold">Notifications</span>
           </div>
           {expandedSection === 'notifications' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -361,7 +361,7 @@ const RetailerSettings: React.FC = () => {
                     onChange={() => setNotifications(prev => ({ ...prev, orderUpdates: !prev.orderUpdates }))}
                     className="sr-only peer"
                   />
-                  <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 dark:peer-focus:ring-indigo-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-indigo-600`}></div>
+                  <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600`}></div>
                 </label>
               </div>
 
@@ -379,7 +379,7 @@ const RetailerSettings: React.FC = () => {
                     onChange={() => setNotifications(prev => ({ ...prev, stockAlerts: !prev.stockAlerts }))}
                     className="sr-only peer"
                   />
-                  <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 dark:peer-focus:ring-indigo-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-indigo-600`}></div>
+                  <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600`}></div>
                 </label>
               </div>
 
@@ -397,7 +397,7 @@ const RetailerSettings: React.FC = () => {
                     onChange={() => setNotifications(prev => ({ ...prev, promotions: !prev.promotions }))}
                     className="sr-only peer"
                   />
-                  <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 dark:peer-focus:ring-indigo-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-indigo-600`}></div>
+                  <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600`}></div>
                 </label>
               </div>
 
@@ -415,7 +415,7 @@ const RetailerSettings: React.FC = () => {
                     onChange={() => setNotifications(prev => ({ ...prev, systemUpdates: !prev.systemUpdates }))}
                     className="sr-only peer"
                   />
-                  <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 dark:peer-focus:ring-indigo-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-indigo-600`}></div>
+                  <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600`}></div>
                 </label>
               </div>
             </div>

@@ -101,14 +101,14 @@ const AdminLogin: React.FC = () => {
 
   return (
     <div 
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-900 to-emerald-800"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-blue-800"
       style={{
         backgroundImage: `url('/images/adminbackground.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
     >
-      <div className="max-w-md w-full mx-4 bg-emerald-800/50 backdrop-blur-lg rounded-lg shadow-2xl p-8 border border-emerald-700">
+      <div className="max-w-md w-full mx-4 bg-blue-800/50 backdrop-blur-lg rounded-lg shadow-2xl p-8 border border-blue-700">
         {showForgotPassword ? (
           <>
             <div className="flex items-center mb-6">
@@ -135,7 +135,7 @@ const AdminLogin: React.FC = () => {
                     setShowForgotPassword(false);
                     setResetEmailSent(false);
                   }}
-                  className="text-emerald-400 hover:text-emerald-300"
+                  className="text-blue-400 hover:text-blue-300"
                 >
                   Return to login
                 </button>
@@ -153,7 +153,7 @@ const AdminLogin: React.FC = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="pl-10 pr-4 py-2 w-full rounded-md bg-emerald-700/50 border-emerald-600 text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                      className="pl-10 pr-4 py-2 w-full rounded-md bg-blue-700/50 border-blue-600 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Enter your email"
                     />
                   </div>
@@ -171,7 +171,7 @@ const AdminLogin: React.FC = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50"
+                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
                 >
                   {loading ? (
                     <div className="w-5 h-5 border-t-2 border-white rounded-full animate-spin" />
@@ -185,7 +185,7 @@ const AdminLogin: React.FC = () => {
         ) : (
           <>
             <div className="flex justify-center mb-8">
-              <div className="w-20 h-20 rounded-full bg-emerald-600/20 flex items-center justify-center overflow-hidden">
+              <div className="w-20 h-20 rounded-full bg-blue-600/20 flex items-center justify-center overflow-hidden">
                 <img 
                   src="/images/logo.png"
                   alt="Admin Logo"
@@ -205,8 +205,8 @@ const AdminLogin: React.FC = () => {
               </div>
             )}
 
-            <div className="mb-6 p-4 rounded-md bg-emerald-900/40 border border-emerald-500/30">
-              <h3 className="text-emerald-300 font-semibold mb-2 text-sm uppercase tracking-wider">Demo Credentials</h3>
+            <div className="mb-6 p-4 rounded-md bg-blue-900/40 border border-blue-500/30">
+              <h3 className="text-blue-300 font-semibold mb-2 text-sm uppercase tracking-wider">Demo Credentials</h3>
               <p className="text-gray-300 text-sm mb-1"><span className="text-gray-400">Email:</span> admin123@gmail.com</p>
               <p className="text-gray-300 text-sm"><span className="text-gray-400">Password:</span> 12345678</p>
             </div>
@@ -223,7 +223,7 @@ const AdminLogin: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="pl-10 pr-4 py-2 w-full rounded-md bg-emerald-700/50 border-emerald-600 text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="pl-10 pr-4 py-2 w-full rounded-md bg-blue-700/50 border-blue-600 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -240,7 +240,7 @@ const AdminLogin: React.FC = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
-                    className="pl-10 pr-12 py-2 w-full rounded-md bg-emerald-700/50 border-emerald-600 text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="pl-10 pr-12 py-2 w-full rounded-md bg-blue-700/50 border-blue-600 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your password"
                   />
                   <button
@@ -257,7 +257,7 @@ const AdminLogin: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setShowForgotPassword(true)}
-                  className="text-sm text-emerald-400 hover:text-emerald-300"
+                  className="text-sm text-blue-400 hover:text-blue-300"
                 >
                   Forgot password?
                 </button>
@@ -266,7 +266,7 @@ const AdminLogin: React.FC = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
               >
                 {loading ? (
                   <div className="w-5 h-5 border-t-2 border-white rounded-full animate-spin" />
@@ -276,7 +276,7 @@ const AdminLogin: React.FC = () => {
               </button>
 
               <div className="mt-6 text-center">
-                <Link to="/login" className="text-sm text-emerald-400 hover:text-emerald-300 hover:underline transition-colors">
+                <Link to="/login" className="text-sm text-blue-400 hover:text-blue-300 hover:underline transition-colors">
                   Are you a retailer? Login here &rarr;
                 </Link>
               </div>

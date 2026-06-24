@@ -329,7 +329,7 @@ const RetailerDashboard: React.FC = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-full">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
       </div>
     );
   }
@@ -344,7 +344,7 @@ const RetailerDashboard: React.FC = () => {
             onClick={() => handleTimeFilterChange('day')}
             className={`px-4 py-2 rounded-md ${
               timeFilter === 'day'
-                ? 'bg-indigo-600 text-white'
+                ? 'bg-blue-600 text-white'
                 : isDarkMode
                 ? 'bg-gray-700 text-gray-200'
                 : 'bg-gray-200 text-gray-700'
@@ -356,7 +356,7 @@ const RetailerDashboard: React.FC = () => {
             onClick={() => handleTimeFilterChange('week')}
             className={`px-4 py-2 rounded-md ${
               timeFilter === 'week'
-                ? 'bg-indigo-600 text-white'
+                ? 'bg-blue-600 text-white'
                 : isDarkMode
                 ? 'bg-gray-700 text-gray-200'
                 : 'bg-gray-200 text-gray-700'
@@ -368,7 +368,7 @@ const RetailerDashboard: React.FC = () => {
             onClick={() => handleTimeFilterChange('month')}
             className={`px-4 py-2 rounded-md ${
               timeFilter === 'month'
-                ? 'bg-indigo-600 text-white'
+                ? 'bg-blue-600 text-white'
                 : isDarkMode
                 ? 'bg-gray-700 text-gray-200'
                 : 'bg-gray-200 text-gray-700'
@@ -380,7 +380,7 @@ const RetailerDashboard: React.FC = () => {
             onClick={() => handleTimeFilterChange('custom')}
             className={`px-4 py-2 rounded-md flex items-center ${
               timeFilter === 'custom'
-                ? 'bg-indigo-600 text-white'
+                ? 'bg-blue-600 text-white'
                 : isDarkMode
                 ? 'bg-gray-700 text-gray-200'
                 : 'bg-gray-200 text-gray-700'
@@ -407,7 +407,7 @@ const RetailerDashboard: React.FC = () => {
               <div className="flex items-center mt-2 text-green-500">
               </div>
             </div>
-            <div className="p-3 rounded-full bg-indigo-100 text-indigo-600">
+            <div className="p-3 rounded-full bg-blue-100 text-blue-600">
               <TrendingUp size={24} />
             </div>
           </div>
@@ -591,7 +591,7 @@ const RetailerDashboard: React.FC = () => {
                   setTimeFilter('custom');
                   setShowDatePicker(false);
                 }}
-                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md"
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md"
               >
                 Apply
               </button>

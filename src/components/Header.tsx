@@ -72,7 +72,7 @@ const Header: React.FC = () => {
                 : 'hover:bg-gray-100'
             }`}
           >
-            <div className="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center text-white">
+            <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white">
               A
             </div>
             <span className={isDarkMode ? 'text-gray-300' : 'text-gray-700'}>

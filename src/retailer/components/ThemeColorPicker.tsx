@@ -14,8 +14,8 @@ const ThemeColorPicker: React.FC = () => {
     { 
       name: 'Green',
       value: 'green',
-      bgClass: 'bg-green-600',
-      hoverClass: 'hover:bg-green-700'
+      bgClass: 'bg-blue-600',
+      hoverClass: 'hover:bg-blue-700'
     },
     { 
       name: 'Blue',
