@@ -42,13 +42,23 @@ const RetailerLayout: React.FC = () => {
   }, [navigate]);
   
   return (
-    <div className={`flex h-screen ${isDarkMode ? 'dark bg-slate-900 text-white' : 'bg-slate-50 text-slate-900'}`}>
-      <RetailerSidebar />
-      <div className="flex flex-col flex-1 overflow-hidden">
-        <RetailerHeader />
-        <main className={`flex-1 overflow-y-auto p-4 ${isDarkMode ? 'bg-slate-800' : 'bg-slate-100'}`}>
-          <Outlet />
-        </main>
+    <div className={`flex h-screen relative overflow-hidden ${isDarkMode ? 'dark text-white bg-slate-950' : 'text-slate-900 bg-slate-50'}`}>
+      {/* Animated Gradient Background Elements */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className={`absolute -top-40 -right-40 w-96 h-96 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob ${isDarkMode ? 'bg-blue-600' : 'bg-blue-400'}`}></div>
+        <div className={`absolute top-40 -left-20 w-72 h-72 rounded-full mix-blend-screen filter blur-[80px] opacity-20 animate-blob animation-delay-2000 ${isDarkMode ? 'bg-indigo-600' : 'bg-indigo-400'}`}></div>
+        <div className={`absolute -bottom-40 left-1/2 w-96 h-96 rounded-full mix-blend-screen filter blur-[100px] opacity-20 animate-blob animation-delay-4000 ${isDarkMode ? 'bg-cyan-600' : 'bg-cyan-400'}`}></div>
+      </div>
+      
+      {/* Foreground Content */}
+      <div className="flex w-full h-full z-10 relative">
+        <RetailerSidebar />
+        <div className="flex flex-col flex-1 overflow-hidden z-10">
+          <RetailerHeader />
+          <main className="flex-1 overflow-y-auto p-6 scroll-smooth">
+            <Outlet />
+          </main>
+        </div>
       </div>
     </div>
   );
