@@ -40,7 +40,7 @@ const RetailerHeader: React.FC = () => {
 
   return (
     <header className={`flex justify-between items-center p-4 border-b ${
-      isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
+      isDarkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-slate-200'
     }`}>
       <div className="flex items-center space-x-4">
         <h1 className="text-xl font-bold">{shopName}</h1>
@@ -48,7 +48,7 @@ const RetailerHeader: React.FC = () => {
       <div className="flex items-center space-x-4">
         <button
           className={`p-2 rounded-full ${
-            isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
+            isDarkMode ? 'hover:bg-slate-700' : 'hover:bg-slate-100'
           }`}
           onClick={toggleTheme}
         >

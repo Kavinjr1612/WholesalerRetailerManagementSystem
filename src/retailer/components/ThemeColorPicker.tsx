@@ -55,8 +55,8 @@ const ThemeColorPicker: React.FC = () => {
   };
 
   return (
-    <div className="p-6 max-w-md mx-auto bg-white rounded-xl shadow-md dark:bg-gray-800">
-      <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+    <div className="p-6 max-w-md mx-auto bg-white rounded-xl shadow-md dark:bg-slate-800">
+      <h2 className="text-xl font-bold mb-4 text-slate-900 dark:text-white">
         Choose Theme Color
       </h2>
       
@@ -78,8 +78,8 @@ const ThemeColorPicker: React.FC = () => {
         ))}
       </div>
 
-      <div className="mt-4 p-4 rounded-md bg-gray-100 dark:bg-gray-700">
-        <p className="text-sm text-gray-600 dark:text-gray-300">
+      <div className="mt-4 p-4 rounded-md bg-slate-100 dark:bg-slate-700">
+        <p className="text-sm text-slate-600 dark:text-slate-300">
           Current theme: <span className="font-medium">{selectedColor}</span>
         </p>
       </div>

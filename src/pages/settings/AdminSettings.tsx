@@ -77,10 +77,10 @@ const AdminSettings: React.FC = () => {
       )}
 
       {/* Shop Name Section */}
-      <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+      <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
         <button
           className={`w-full px-6 py-4 flex justify-between items-center ${
-            isDarkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-50'
+            isDarkMode ? 'hover:bg-slate-600' : 'hover:bg-slate-50'
           }`}
           onClick={() => toggleSection('shop')}
         >
@@ -92,10 +92,10 @@ const AdminSettings: React.FC = () => {
         </button>
 
         {expandedSection === 'shop' && (
-          <div className="p-6 border-t border-gray-200 dark:border-gray-600">
+          <div className="p-6 border-t border-slate-200 dark:border-slate-600">
             <div className="space-y-4">
               <div>
-                <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                   Shop Name
                 </label>
                 <div className="flex items-center space-x-2">
@@ -107,8 +107,8 @@ const AdminSettings: React.FC = () => {
                         onChange={(e) => setShopName(e.target.value)}
                         className={`flex-1 px-3 py-2 rounded-md ${
                           isDarkMode 
-                            ? 'bg-gray-600 border-gray-500' 
-                            : 'bg-gray-50 border-gray-300'
+                            ? 'bg-slate-600 border-slate-500' 
+                            : 'bg-slate-50 border-slate-300'
                         } border`}
                       />
                       <button
@@ -122,14 +122,14 @@ const AdminSettings: React.FC = () => {
                           setIsEditing(false);
                           fetchShopName();
                         }}
-                        className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600"
+                        className="px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-slate-600"
                       >
                         Cancel
                       </button>
                     </>
                   ) : (
                     <>
-                      <span className={`flex-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                      <span className={`flex-1 ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                         {shopName}
                       </span>
                       <button

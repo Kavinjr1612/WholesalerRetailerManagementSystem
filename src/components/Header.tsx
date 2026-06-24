@@ -48,7 +48,7 @@ const Header: React.FC = () => {
 
   return (
     <header className={`flex justify-between items-center p-4 border-b ${
-      isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
+      isDarkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-slate-200'
     }`}>
       <div className="flex items-center space-x-4">
         <h1 className="text-xl font-bold">{shopName}</h1>
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
       <div className="flex items-center space-x-4">
         <button
           className={`p-2 rounded-full ${
-            isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
+            isDarkMode ? 'hover:bg-slate-700' : 'hover:bg-slate-100'
           }`}
           onClick={toggleTheme}
         >
@@ -68,14 +68,14 @@ const Header: React.FC = () => {
             onClick={() => setIsProfileOpen(!isProfileOpen)}
             className={`flex items-center space-x-2 p-2 rounded-lg ${
               isDarkMode 
-                ? 'hover:bg-gray-700' 
-                : 'hover:bg-gray-100'
+                ? 'hover:bg-slate-700' 
+                : 'hover:bg-slate-100'
             }`}
           >
             <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white">
               A
             </div>
-            <span className={isDarkMode ? 'text-gray-300' : 'text-gray-700'}>
+            <span className={isDarkMode ? 'text-slate-300' : 'text-slate-700'}>
               Admin
             </span>
             <ChevronDown size={16} className={`transform transition-transform ${
@@ -86,8 +86,8 @@ const Header: React.FC = () => {
           {isProfileOpen && (
             <div className={`absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 ${
               isDarkMode 
-                ? 'bg-gray-700 border border-gray-600' 
-                : 'bg-white border border-gray-200'
+                ? 'bg-slate-700 border border-slate-600' 
+                : 'bg-white border border-slate-200'
             }`}>
               <button
                 onClick={() => {
@@ -96,8 +96,8 @@ const Header: React.FC = () => {
                 }}
                 className={`flex items-center w-full px-4 py-2 text-sm ${
                   isDarkMode 
-                    ? 'text-gray-300 hover:bg-gray-600' 
-                    : 'text-gray-700 hover:bg-gray-100'
+                    ? 'text-slate-300 hover:bg-slate-600' 
+                    : 'text-slate-700 hover:bg-slate-100'
                 }`}
               >
                 <Settings size={16} className="mr-2" />
@@ -107,8 +107,8 @@ const Header: React.FC = () => {
                 onClick={handleLogout}
                 className={`flex items-center w-full px-4 py-2 text-sm ${
                   isDarkMode 
-                    ? 'text-red-400 hover:bg-gray-600' 
-                    : 'text-red-600 hover:bg-gray-100'
+                    ? 'text-red-400 hover:bg-slate-600' 
+                    : 'text-red-600 hover:bg-slate-100'
                 }`}
               >
                 <LogOut size={16} className="mr-2" />

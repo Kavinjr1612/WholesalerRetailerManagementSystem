@@ -19,27 +19,27 @@ const DateRangePicker: React.FC<DateRangePickerProps> = ({
   return (
     <div className="flex items-center space-x-4">
       <div className="flex items-center">
-        <Calendar size={20} className="mr-2 text-gray-400" />
+        <Calendar size={20} className="mr-2 text-slate-400" />
         <input
           type="date"
           value={startDate}
           onChange={(e) => onStartDateChange(e.target.value)}
           className={`p-2 rounded-md ${
             isDarkMode 
-              ? 'bg-gray-700 text-white border-gray-600' 
-              : 'bg-white text-gray-900 border-gray-300'
+              ? 'bg-slate-700 text-white border-slate-600' 
+              : 'bg-white text-slate-900 border-slate-300'
           } border`}
         />
       </div>
-      <span className="text-gray-500">to</span>
+      <span className="text-slate-500">to</span>
       <input
         type="date"
         value={endDate}
         onChange={(e) => onEndDateChange(e.target.value)}
         className={`p-2 rounded-md ${
           isDarkMode 
-            ? 'bg-gray-700 text-white border-gray-600' 
-            : 'bg-white text-gray-900 border-gray-300'
+            ? 'bg-slate-700 text-white border-slate-600' 
+            : 'bg-white text-slate-900 border-slate-300'
         } border`}
       />
     </div>

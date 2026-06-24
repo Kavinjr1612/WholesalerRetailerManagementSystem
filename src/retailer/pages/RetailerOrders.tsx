@@ -295,17 +295,17 @@ const RetailerOrders: React.FC = () => {
       )}
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className={`${isDarkMode ? 'bg-gray-800' : ''}`}>
+        <TabsList className={`${isDarkMode ? 'bg-slate-800' : ''}`}>
           <TabsTrigger 
             value="order" 
-            className={`flex items-center ${isDarkMode ? 'data-[state=active]:bg-gray-700' : ''}`}
+            className={`flex items-center ${isDarkMode ? 'data-[state=active]:bg-slate-700' : ''}`}
           >
             <ShoppingCart size={16} className="mr-2" />
             New Order
           </TabsTrigger>
           <TabsTrigger 
             value="history" 
-            className={`flex items-center ${isDarkMode ? 'data-[state=active]:bg-gray-700' : ''}`}
+            className={`flex items-center ${isDarkMode ? 'data-[state=active]:bg-slate-700' : ''}`}
           >
             <History size={16} className="mr-2" />
             Order History
@@ -315,18 +315,18 @@ const RetailerOrders: React.FC = () => {
         <TabsContent value="order" className="mt-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2">
-              <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+              <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="flex-1">
                     <div className="flex items-center">
-                      <Search size={20} className={`mr-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`} />
+                      <Search size={20} className={`mr-2 ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`} />
                       <input
                         type="text"
                         placeholder="Search products..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         className={`w-full p-2 rounded-md outline-none ${
-                          isDarkMode ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'
+                          isDarkMode ? 'bg-slate-600 text-white' : 'bg-slate-100 text-slate-900'
                         }`}
                       />
                     </div>
@@ -335,8 +335,8 @@ const RetailerOrders: React.FC = () => {
                     value={categoryFilter}
                     onChange={(e) => setCategoryFilter(e.target.value)}
                     className={`p-2 rounded-md ${
-                      isDarkMode ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'
-                    } border border-gray-300`}
+                      isDarkMode ? 'bg-slate-600 text-white' : 'bg-slate-100 text-slate-900'
+                    } border border-slate-300`}
                   >
                     <option value="all">All Categories</option>
                     <option value="uncategorized">Uncategorized</option>
@@ -350,10 +350,10 @@ const RetailerOrders: React.FC = () => {
                   {filteredProducts.map(product => (
                     <div
                       key={product.id}
-                      className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}
+                      className={`p-4 rounded-lg ${isDarkMode ? 'bg-slate-600' : 'bg-slate-50'}`}
                     >
                       <div className="flex items-start space-x-4">
-                        <div className="w-24 h-24 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0">
+                        <div className="w-24 h-24 bg-slate-200 rounded-lg overflow-hidden flex-shrink-0">
                           {product.image_url ? (
                             <img
                               src={product.image_url}
@@ -362,7 +362,7 @@ const RetailerOrders: React.FC = () => {
                             />
                           ) : (
                             <div className="w-full h-full flex items-center justify-center">
-                              <Package size={32} className="text-gray-400" />
+                              <Package size={32} className="text-slate-400" />
                             </div>
                           )}
                         </div>
@@ -371,7 +371,7 @@ const RetailerOrders: React.FC = () => {
                             <h3 className="font-medium">{product.name}</h3>
                             <span className="font-bold text-blue-600">₹{product.price.toFixed(2)}</span>
                           </div>
-                          <p className={`text-sm mt-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                          <p className={`text-sm mt-1 ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                             {product.description || 'No description available'}
                           </p>
                           <button
@@ -390,13 +390,13 @@ const RetailerOrders: React.FC = () => {
             </div>
 
             <div>
-              <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+              <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
                 <h2 className="text-lg font-semibold mb-4">Shopping Cart</h2>
 
                 {cart.length === 0 ? (
                   <div className="flex flex-col items-center justify-center py-8">
-                    <ShoppingCart size={48} className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`} />
-                    <p className={`mt-4 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                    <ShoppingCart size={48} className={`${isDarkMode ? 'text-slate-500' : 'text-slate-400'}`} />
+                    <p className={`mt-4 text-center ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                       Your cart is empty
                     </p>
                   </div>
@@ -406,10 +406,10 @@ const RetailerOrders: React.FC = () => {
                       {cart.map(item => (
                         <div
                           key={item.id}
-                          className={`p-3 rounded ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}
+                          className={`p-3 rounded ${isDarkMode ? 'bg-slate-600' : 'bg-slate-50'}`}
                         >
                           <div className="flex items-start space-x-3">
-                            <div className="w-16 h-16 bg-gray-200 rounded overflow-hidden flex-shrink-0">
+                            <div className="w-16 h-16 bg-slate-200 rounded overflow-hidden flex-shrink-0">
                               {item.image_url ? (
                                 <img
                                   src={item.image_url}
@@ -418,7 +418,7 @@ const RetailerOrders: React.FC = () => {
                                 />
                               ) : (
                                 <div className="w-full h-full flex items-center justify-center">
-                                  <Package size={24} className="text-gray-400" />
+                                  <Package size={24} className="text-slate-400" />
                                 </div>
                               )}
                             </div>
@@ -432,7 +432,7 @@ const RetailerOrders: React.FC = () => {
                                   <Trash2 size={16} />
                                 </button>
                               </div>
-                              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                                 ₹{item.price.toFixed(2)} each
                               </p>
                               <div className="mt-2 flex items-center justify-between">
@@ -442,7 +442,7 @@ const RetailerOrders: React.FC = () => {
                                   onChange={(e) => updateQuantity(item.id, e.target.value)}
                                   min="1"
                                   className={`w-20 p-1 text-center rounded ${
-                                    isDarkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-900'
+                                    isDarkMode ? 'bg-slate-700 text-white' : 'bg-white text-slate-900'
                                   }`}
                                 />
                                 <span className="font-medium">
@@ -455,7 +455,7 @@ const RetailerOrders: React.FC = () => {
                       ))}
                     </div>
 
-                    <div className={`p-4 rounded ${isDarkMode ? 'bg-gray-600' : 'bg-gray-100'}`}>
+                    <div className={`p-4 rounded ${isDarkMode ? 'bg-slate-600' : 'bg-slate-100'}`}>
                       <div className="flex justify-between items-center text-lg font-bold mb-4">
                         <span>Total</span>
                         <span>₹{calculateTotal().toFixed(2)}</span>
@@ -477,14 +477,14 @@ const RetailerOrders: React.FC = () => {
         </TabsContent>
 
         <TabsContent value="history" className="mt-6">
-          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-lg font-semibold">Order History</h2>
               <select
                 value={orderStatusFilter}
                 onChange={(e) => setOrderStatusFilter(e.target.value as any)}
                 className={`p-2 rounded-md ${
-                  isDarkMode ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'
+                  isDarkMode ? 'bg-slate-600 text-white' : 'bg-slate-100 text-slate-900'
                 }`}
               >
                 <option value="all">All Orders</option>
@@ -500,7 +500,7 @@ const RetailerOrders: React.FC = () => {
                 .map(order => (
                   <div
                     key={order.id}
-                    className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}
+                    className={`p-4 rounded-lg ${isDarkMode ? 'bg-slate-600' : 'bg-slate-50'}`}
                   >
                     <div 
                       className="flex justify-between items-start cursor-pointer"
@@ -522,7 +522,7 @@ const RetailerOrders: React.FC = () => {
                             {order.status}
                           </span>
                         </div>
-                        <div className="flex items-center mt-2 text-sm text-gray-500">
+                        <div className="flex items-center mt-2 text-sm text-slate-500">
                           <Calendar size={14} className="mr-1" />
                           {new Date(order.created_at).toLocaleDateString()}
                         </div>
@@ -548,7 +548,7 @@ const RetailerOrders: React.FC = () => {
                         <div className="space-y-3">
                           {order.items.map((item) => (
                             <div key={item.id} className="flex items-center space-x-3">
-                              <div className="w-16 h-16 bg-gray-200 rounded overflow-hidden">
+                              <div className="w-16 h-16 bg-slate-200 rounded overflow-hidden">
                                 {item.product.image_url ? (
                                   <img
                                     src={item.product.image_url}
@@ -557,13 +557,13 @@ const RetailerOrders: React.FC = () => {
                                   />
                                 ) : (
                                   <div className="w-full h-full flex items-center justify-center">
-                                    <Package size={24} className="text-gray-400" />
+                                    <Package size={24} className="text-slate-400" />
                                   </div>
                                 )}
                               </div>
                               <div className="flex-1">
                                 <h4 className="font-medium">{item.product.name}</h4>
-                                <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                                <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                                   Quantity: {item.quantity} × ₹{item.unit_price.toFixed(2)}
                                 </p>
                               </div>

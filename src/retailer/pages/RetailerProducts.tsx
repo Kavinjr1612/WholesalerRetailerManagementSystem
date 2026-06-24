@@ -243,10 +243,10 @@ const RetailerProducts: React.FC = () => {
       <h1 className="text-2xl font-bold">Products Management</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-center">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Total Sales</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Total Sales</p>
               <h3 className="text-2xl font-bold">₹{totalStats.totalSales.toLocaleString()}</h3>
             </div>
             <div className="p-3 rounded-full bg-blue-100 text-blue-600">
@@ -255,10 +255,10 @@ const RetailerProducts: React.FC = () => {
           </div>
         </div>
 
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-center">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Average Margin</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Average Margin</p>
               <h3 className="text-2xl font-bold">{totalStats.averageMargin.toFixed(2)}%</h3>
             </div>
             <div className="p-3 rounded-full bg-purple-100 text-purple-600">
@@ -267,10 +267,10 @@ const RetailerProducts: React.FC = () => {
           </div>
         </div>
 
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-center">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Products</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Products</p>
               <h3 className="text-2xl font-bold">{retailerProducts.length}</h3>
             </div>
             <div className="p-3 rounded-full bg-blue-100 text-blue-600">
@@ -281,17 +281,17 @@ const RetailerProducts: React.FC = () => {
       </div>
 
       <Tabs defaultValue="pricing" className="w-full">
-        <TabsList className={`${isDarkMode ? 'bg-gray-800' : ''}`}>
+        <TabsList className={`${isDarkMode ? 'bg-slate-800' : ''}`}>
           <TabsTrigger 
             value="pricing" 
-            className={`flex items-center ${isDarkMode ? 'data-[state=active]:bg-gray-700' : ''}`}
+            className={`flex items-center ${isDarkMode ? 'data-[state=active]:bg-slate-700' : ''}`}
           >
             <Tag size={16} className="mr-2" />
             Product Pricing
           </TabsTrigger>
           <TabsTrigger 
             value="profit" 
-            className={`flex items-center ${isDarkMode ? 'data-[state=active]:bg-gray-700' : ''}`}
+            className={`flex items-center ${isDarkMode ? 'data-[state=active]:bg-slate-700' : ''}`}
           >
             <PieChart size={16} className="mr-2" />
             Profit Analysis
@@ -299,18 +299,18 @@ const RetailerProducts: React.FC = () => {
         </TabsList>
 
         <TabsContent value="pricing" className="mt-6">
-          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
             <div className="flex items-center space-x-4 mb-6">
               <div className="flex-1">
                 <div className="flex items-center">
-                  <Search size={20} className={`mr-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`} />
+                  <Search size={20} className={`mr-2 ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`} />
                   <input
                     type="text"
                     placeholder="Search products..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className={`w-full p-2 rounded-md outline-none ${
-                      isDarkMode ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'
+                      isDarkMode ? 'bg-slate-600 text-white' : 'bg-slate-100 text-slate-900'
                     }`}
                   />
                 </div>
@@ -319,8 +319,8 @@ const RetailerProducts: React.FC = () => {
                 value={categoryFilter}
                 onChange={(e) => setCategoryFilter(e.target.value)}
                 className={`p-2 rounded-md ${
-                  isDarkMode ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'
-                } border border-gray-300`}
+                  isDarkMode ? 'bg-slate-600 text-white' : 'bg-slate-100 text-slate-900'
+                } border border-slate-300`}
               >
                 <option value="all">All Categories</option>
                 <option value="uncategorized">Uncategorized</option>
@@ -333,7 +333,7 @@ const RetailerProducts: React.FC = () => {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className={`border-b ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+                  <tr className={`border-b ${isDarkMode ? 'border-slate-600' : 'border-slate-200'}`}>
                     <th className="text-left py-3 px-4">Product</th>
                     <th className="text-right py-3 px-4">Stock</th>
                     <th className="text-right py-3 px-4">Wholesaler Price</th>
@@ -344,21 +344,21 @@ const RetailerProducts: React.FC = () => {
                 </thead>
                 <tbody>
                   {filteredProducts.map((product) => (
-                    <tr key={product.id} className={`border-b ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+                    <tr key={product.id} className={`border-b ${isDarkMode ? 'border-slate-600' : 'border-slate-200'}`}>
                       <td className="py-3 px-4">
                         <div className="flex items-center">
-                          <div className="w-10 h-10 bg-gray-200 rounded overflow-hidden mr-3">
+                          <div className="w-10 h-10 bg-slate-200 rounded overflow-hidden mr-3">
                             {product.image_url ? (
                               <img src={product.image_url} alt={product.name} className="w-full h-full object-cover" />
                             ) : (
                               <div className="w-full h-full flex items-center justify-center">
-                                <Package size={20} className="text-gray-400" />
+                                <Package size={20} className="text-slate-400" />
                               </div>
                             )}
                           </div>
                           <div>
                             <div className="font-medium">{product.name}</div>
-                            <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                            <div className={`text-sm ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                               {product.category_name || 'Uncategorized'}
                             </div>
                           </div>
@@ -373,8 +373,8 @@ const RetailerProducts: React.FC = () => {
                             value={newPrice}
                             onChange={(e) => setNewPrice(e.target.value)}
                             className={`w-24 p-1 rounded-md ${
-                              isDarkMode ? 'bg-gray-600 text-white' : 'bg-white text-gray-900'
-                            } border border-gray-300`}
+                              isDarkMode ? 'bg-slate-600 text-white' : 'bg-white text-slate-900'
+                            } border border-slate-300`}
                             min="0"
                             step="0.01"
                           />
@@ -425,7 +425,7 @@ const RetailerProducts: React.FC = () => {
         </TabsContent>
 
         <TabsContent value="profit" className="mt-6">
-          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-semibold">Product Performance</h2>
               <div className="flex items-center space-x-4">
@@ -433,8 +433,8 @@ const RetailerProducts: React.FC = () => {
                   selected={startDate}
                   onChange={(date) => setStartDate(date || new Date())}
                   className={`p-2 rounded-md ${
-                    isDarkMode ? 'bg-gray-600 text-white' : 'bg-white text-gray-900'
-                  } border border-gray-300`}
+                    isDarkMode ? 'bg-slate-600 text-white' : 'bg-white text-slate-900'
+                  } border border-slate-300`}
                   dateFormat="dd/MM/yyyy"
                 />
                 <span>to</span>
@@ -442,8 +442,8 @@ const RetailerProducts: React.FC = () => {
                   selected={endDate}
                   onChange={(date) => setEndDate(date || new Date())}
                   className={`p-2 rounded-md ${
-                    isDarkMode ? 'bg-gray-600 text-white' : 'bg-white text-gray-900'
-                  } border border-gray-300`}
+                    isDarkMode ? 'bg-slate-600 text-white' : 'bg-white text-slate-900'
+                  } border border-slate-300`}
                   dateFormat="dd/MM/yyyy"
                 />
               </div>
@@ -468,7 +468,7 @@ const RetailerProducts: React.FC = () => {
                   ))}
                 </tbody>
                 <tfoot>
-                  <tr className={`font-bold ${isDarkMode ? 'bg-gray-600' : 'bg-gray-100'}`}>
+                  <tr className={`font-bold ${isDarkMode ? 'bg-slate-600' : 'bg-slate-100'}`}>
                     <td colSpan={2} className="py-4 px-4 text-right">Total Profit:</td>
                     <td className="py-4 px-4 text-right text-lg text-blue-600">
                       ₹{profitData.reduce((sum, item) => sum + item.totalProfit, 0).toLocaleString()}

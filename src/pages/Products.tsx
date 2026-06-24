@@ -212,30 +212,30 @@ const Products: React.FC = () => {
         </div>
       )}
 
-      <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+      <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="flex items-center">
-            <Search size={20} className={`mr-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`} />
+            <Search size={20} className={`mr-2 ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`} />
             <input
               type="text"
               placeholder="Search products..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className={`w-full p-2 rounded-md outline-none ${
-                isDarkMode ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'
+                isDarkMode ? 'bg-slate-600 text-white' : 'bg-slate-100 text-slate-900'
               }`}
             />
           </div>
 
           <div>
-            <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
               Category
             </label>
             <select
               value={categoryFilter}
               onChange={(e) => setCategoryFilter(e.target.value)}
               className={`w-full p-2 rounded-md ${
-                isDarkMode ? 'bg-gray-600 text-white border-gray-700' : 'bg-gray-100 text-gray-900 border-gray-200'
+                isDarkMode ? 'bg-slate-600 text-white border-slate-700' : 'bg-slate-100 text-slate-900 border-slate-200'
               }`}
             >
               <option value="all">All Categories</option>
@@ -247,14 +247,14 @@ const Products: React.FC = () => {
           </div>
 
           <div>
-            <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
               Stock Status
             </label>
             <select
               value={stockFilter}
               onChange={(e) => setStockFilter(e.target.value as 'all' | 'low' | 'out')}
               className={`w-full p-2 rounded-md ${
-                isDarkMode ? 'bg-gray-600 text-white border-gray-700' : 'bg-gray-100 text-gray-900 border-gray-200'
+                isDarkMode ? 'bg-slate-600 text-white border-slate-700' : 'bg-slate-100 text-slate-900 border-slate-200'
               }`}
             >
               <option value="all">All Stock Levels</option>
@@ -269,14 +269,14 @@ const Products: React.FC = () => {
         {filteredProducts.map((product) => (
           <div
             key={product.id}
-            className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}
+            className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}
           >
-            <div className="h-48 bg-gray-200 relative">
+            <div className="h-48 bg-slate-200 relative">
               {product.image_url ? (
                 <img src={product.image_url} alt={product.name} className="w-full h-full object-cover" />
               ) : (
-                <div className="w-full h-full flex items-center justify-center bg-gray-300">
-                  <Package size={48} className="text-gray-400" />
+                <div className="w-full h-full flex items-center justify-center bg-slate-300">
+                  <Package size={48} className="text-slate-400" />
                 </div>
               )}
               {product.stock_quantity < 10 && (
@@ -293,24 +293,24 @@ const Products: React.FC = () => {
                 <div>
                   <h3 className="font-semibold text-lg">{product.name}</h3>
                   <div className="flex items-center space-x-2 mt-1">
-                    <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                    <span className={`text-sm ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                       {product.category_name || 'Uncategorized'}
                     </span>
                   </div>
                 </div>
                 <span className="font-bold text-blue-600">₹{product.price.toFixed(2)}</span>
               </div>
-              <p className={`mt-2 text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} line-clamp-2`}>
+              <p className={`mt-2 text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'} line-clamp-2`}>
                 {product.description || 'No description available'}
               </p>
               <div className="mt-4 flex justify-between items-center">
-                <span className={`text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                <span className={`text-sm font-medium ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                   Stock: {product.stock_quantity}
                 </span>
                 <div className="flex space-x-2">
                   <button
                     onClick={() => openEditModal(product)}
-                    className="p-2 rounded-full text-green-600 hover:bg-green-100 dark:hover:bg-gray-600"
+                    className="p-2 rounded-full text-green-600 hover:bg-green-100 dark:hover:bg-slate-600"
                   >
                     <Edit size={16} />
                   </button>
@@ -319,7 +319,7 @@ const Products: React.FC = () => {
                       setCurrentProduct(product);
                       setShowModal(true);
                     }}
-                    className="p-2 rounded-full text-red-600 hover:bg-red-100 dark:hover:bg-gray-600"
+                    className="p-2 rounded-full text-red-600 hover:bg-red-100 dark:hover:bg-slate-600"
                   >
                     <Trash2 size={16} />
                   </button>
@@ -334,10 +334,10 @@ const Products: React.FC = () => {
   <div className="fixed inset-0 z-10 overflow-y-auto">
     <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
       <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-        <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+        <div className="absolute inset-0 bg-slate-500 opacity-75"></div>
       </div>
       <div className={`inline-block align-bottom rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full ${
-        isDarkMode ? 'bg-gray-800' : 'bg-white'
+        isDarkMode ? 'bg-slate-800' : 'bg-white'
       }`}>
         <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
           <h3 className="text-lg leading-6 font-medium mb-4">
@@ -348,7 +348,7 @@ const Products: React.FC = () => {
               {/* ID Field (only for new products) */}
               {!currentProduct && (
                 <div>
-                  <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                  <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                     ID
                   </label>
                   <input
@@ -358,14 +358,14 @@ const Products: React.FC = () => {
                     onChange={handleInputChange}
                     placeholder="ID"
                     className={`w-full p-2 border rounded-md ${
-                      isDarkMode ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
+                      isDarkMode ? 'bg-slate-700 border-slate-600 text-white' : 'bg-white border-slate-300'
                     }`}
                   />
                 </div>
               )}
               {/* Name Field (always shown) */}
               <div className={currentProduct ? 'col-span-2' : ''}>
-                <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                   Name
                 </label>
                 <input
@@ -376,7 +376,7 @@ const Products: React.FC = () => {
                   placeholder="Product Name"
                   required
                   className={`w-full p-2 border rounded-md ${
-                    isDarkMode ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
+                    isDarkMode ? 'bg-slate-700 border-slate-600 text-white' : 'bg-white border-slate-300'
                   }`}
                 />
               </div>
@@ -391,7 +391,7 @@ const Products: React.FC = () => {
                 onChange={handleInputChange}
                 placeholder="Category"
                 className={`w-full p-2 border rounded-md ${
-                  isDarkMode ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
+                  isDarkMode ? 'bg-slate-700 border-slate-600 text-white' : 'bg-white border-slate-300'
                 }`}
               />
             </div>
@@ -404,7 +404,7 @@ const Products: React.FC = () => {
               placeholder="Description"
               rows={3}
               className={`w-full p-2 border rounded-md ${
-                isDarkMode ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
+                isDarkMode ? 'bg-slate-700 border-slate-600 text-white' : 'bg-white border-slate-300'
               }`}
             />
 
@@ -420,7 +420,7 @@ const Products: React.FC = () => {
                 min="0"
                 step="0.01"
                 className={`w-full p-2 border rounded-md ${
-                  isDarkMode ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
+                  isDarkMode ? 'bg-slate-700 border-slate-600 text-white' : 'bg-white border-slate-300'
                 }`}
               />
               <input
@@ -432,7 +432,7 @@ const Products: React.FC = () => {
                 required
                 min="0"
                 className={`w-full p-2 border rounded-md ${
-                  isDarkMode ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
+                  isDarkMode ? 'bg-slate-700 border-slate-600 text-white' : 'bg-white border-slate-300'
                 }`}
               />
             </div>
@@ -445,7 +445,7 @@ const Products: React.FC = () => {
               onChange={handleInputChange}
               placeholder="Image URL"
               className={`w-full p-2 border rounded-md ${
-                isDarkMode ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
+                isDarkMode ? 'bg-slate-700 border-slate-600 text-white' : 'bg-white border-slate-300'
               }`}
             />
 
@@ -455,7 +455,7 @@ const Products: React.FC = () => {
                 type="button"
                 onClick={resetForm}
                 className={`px-4 py-2 rounded-md ${
-                  isDarkMode ? 'bg-gray-600 text-gray-300 hover:bg-gray-500' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  isDarkMode ? 'bg-slate-600 text-slate-300 hover:bg-slate-500' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
                 Cancel

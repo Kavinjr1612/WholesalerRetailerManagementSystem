@@ -111,10 +111,10 @@ const RetailerSettings: React.FC = () => {
       <h1 className="text-2xl font-bold">Settings</h1>
 
       {/* Appearance Section */}
-      <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+      <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
         <button
           className={`w-full px-6 py-4 flex justify-between items-center ${
-            isDarkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-50'
+            isDarkMode ? 'hover:bg-slate-600' : 'hover:bg-slate-50'
           }`}
           onClick={() => toggleSection('appearance')}
         >
@@ -126,7 +126,7 @@ const RetailerSettings: React.FC = () => {
         </button>
 
         {expandedSection === 'appearance' && (
-          <div className="p-6 border-t border-gray-200 dark:border-gray-600">
+          <div className="p-6 border-t border-slate-200 dark:border-slate-600">
             <div className="space-y-6">
               <div>
                 <h3 className="text-md font-medium mb-4">Theme Mode</h3>
@@ -136,7 +136,7 @@ const RetailerSettings: React.FC = () => {
                     className={`flex items-center px-4 py-2 rounded-md ${
                       !isDarkMode 
                         ? 'bg-primary/10 text-primary' 
-                        : 'bg-gray-600 text-gray-300'
+                        : 'bg-slate-600 text-slate-300'
                     }`}
                   >
                     <Sun size={18} className="mr-2" />
@@ -148,7 +148,7 @@ const RetailerSettings: React.FC = () => {
                     className={`flex items-center px-4 py-2 rounded-md ${
                       isDarkMode 
                         ? 'bg-primary/10 text-primary' 
-                        : 'bg-gray-100 text-gray-700'
+                        : 'bg-slate-100 text-slate-700'
                     }`}
                   >
                     <Moon size={18} className="mr-2" />
@@ -183,10 +183,10 @@ const RetailerSettings: React.FC = () => {
       </div>
 
       {/* Account Section */}
-      <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+      <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
         <button
           className={`w-full px-6 py-4 flex justify-between items-center ${
-            isDarkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-50'
+            isDarkMode ? 'hover:bg-slate-600' : 'hover:bg-slate-50'
           }`}
           onClick={() => toggleSection('account')}
         >
@@ -198,10 +198,10 @@ const RetailerSettings: React.FC = () => {
         </button>
 
         {expandedSection === 'account' && (
-          <div className="p-6 border-t border-gray-200 dark:border-gray-600">
+          <div className="p-6 border-t border-slate-200 dark:border-slate-600">
             <div className="space-y-4">
               <div>
-                <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                <label className={`block text-sm font-medium ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                   Shop Name
                 </label>
                 <input
@@ -210,14 +210,14 @@ const RetailerSettings: React.FC = () => {
                   readOnly
                   className={`mt-1 block w-full rounded-md ${
                     isDarkMode 
-                      ? 'bg-gray-600 border-gray-500' 
-                      : 'bg-gray-50 border-gray-300'
+                      ? 'bg-slate-600 border-slate-500' 
+                      : 'bg-slate-50 border-slate-300'
                   } border px-3 py-2`}
                 />
               </div>
 
               <div>
-                <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                <label className={`block text-sm font-medium ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                   Retailer Name
                 </label>
                 <input
@@ -226,14 +226,14 @@ const RetailerSettings: React.FC = () => {
                   readOnly
                   className={`mt-1 block w-full rounded-md ${
                     isDarkMode 
-                      ? 'bg-gray-600 border-gray-500' 
-                      : 'bg-gray-50 border-gray-300'
+                      ? 'bg-slate-600 border-slate-500' 
+                      : 'bg-slate-50 border-slate-300'
                   } border px-3 py-2`}
                 />
               </div>
 
               <div>
-                <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                <label className={`block text-sm font-medium ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                   Email
                 </label>
                 <input
@@ -242,14 +242,14 @@ const RetailerSettings: React.FC = () => {
                   readOnly
                   className={`mt-1 block w-full rounded-md ${
                     isDarkMode 
-                      ? 'bg-gray-600 border-gray-500' 
-                      : 'bg-gray-50 border-gray-300'
+                      ? 'bg-slate-600 border-slate-500' 
+                      : 'bg-slate-50 border-slate-300'
                   } border px-3 py-2`}
                 />
               </div>
 
               <div>
-                <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                <label className={`block text-sm font-medium ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                   Password
                 </label>
                 <div className="mt-1 relative">
@@ -259,8 +259,8 @@ const RetailerSettings: React.FC = () => {
                     readOnly
                     className={`block w-full rounded-md ${
                       isDarkMode 
-                        ? 'bg-gray-600 border-gray-500' 
-                        : 'bg-gray-50 border-gray-300'
+                        ? 'bg-slate-600 border-slate-500' 
+                        : 'bg-slate-50 border-slate-300'
                     } border px-3 py-2 pr-10`}
                   />
                   <button
@@ -274,7 +274,7 @@ const RetailerSettings: React.FC = () => {
               </div>
 
               <div>
-                <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                <label className={`block text-sm font-medium ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                   Address
                 </label>
                 <input
@@ -283,14 +283,14 @@ const RetailerSettings: React.FC = () => {
                   readOnly
                   className={`mt-1 block w-full rounded-md ${
                     isDarkMode 
-                      ? 'bg-gray-600 border-gray-500' 
-                      : 'bg-gray-50 border-gray-300'
+                      ? 'bg-slate-600 border-slate-500' 
+                      : 'bg-slate-50 border-slate-300'
                   } border px-3 py-2`}
                 />
               </div>
 
               <div>
-                <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                <label className={`block text-sm font-medium ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                   Phone
                 </label>
                 <input
@@ -299,8 +299,8 @@ const RetailerSettings: React.FC = () => {
                   readOnly
                   className={`mt-1 block w-full rounded-md ${
                     isDarkMode 
-                      ? 'bg-gray-600 border-gray-500' 
-                      : 'bg-gray-50 border-gray-300'
+                      ? 'bg-slate-600 border-slate-500' 
+                      : 'bg-slate-50 border-slate-300'
                   } border px-3 py-2`}
                 />
               </div>
@@ -330,10 +330,10 @@ const RetailerSettings: React.FC = () => {
       </div>
 
       {/* Notifications Section */}
-      <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+      <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
         <button
           className={`w-full px-6 py-4 flex justify-between items-center ${
-            isDarkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-50'
+            isDarkMode ? 'hover:bg-slate-600' : 'hover:bg-slate-50'
           }`}
           onClick={() => toggleSection('notifications')}
         >
@@ -345,12 +345,12 @@ const RetailerSettings: React.FC = () => {
         </button>
 
         {expandedSection === 'notifications' && (
-          <div className="p-6 border-t border-gray-200 dark:border-gray-600">
+          <div className="p-6 border-t border-slate-200 dark:border-slate-600">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="font-medium">Order Updates</h3>
-                  <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                     Get notified about order status changes
                   </p>
                 </div>
@@ -361,14 +361,14 @@ const RetailerSettings: React.FC = () => {
                     onChange={() => setNotifications(prev => ({ ...prev, orderUpdates: !prev.orderUpdates }))}
                     className="sr-only peer"
                   />
-                  <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600`}></div>
+                  <div className={`w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-blue-600`}></div>
                 </label>
               </div>
 
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="font-medium">Stock Alerts</h3>
-                  <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                     Get notified when stock is running low
                   </p>
                 </div>
@@ -379,14 +379,14 @@ const RetailerSettings: React.FC = () => {
                     onChange={() => setNotifications(prev => ({ ...prev, stockAlerts: !prev.stockAlerts }))}
                     className="sr-only peer"
                   />
-                  <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600`}></div>
+                  <div className={`w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-blue-600`}></div>
                 </label>
               </div>
 
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="font-medium">Promotions</h3>
-                  <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                     Get notified about new promotions
                   </p>
                 </div>
@@ -397,14 +397,14 @@ const RetailerSettings: React.FC = () => {
                     onChange={() => setNotifications(prev => ({ ...prev, promotions: !prev.promotions }))}
                     className="sr-only peer"
                   />
-                  <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600`}></div>
+                  <div className={`w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-blue-600`}></div>
                 </label>
               </div>
 
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="font-medium">System Updates</h3>
-                  <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                     Get notified about system updates
                   </p>
                 </div>
@@ -415,7 +415,7 @@ const RetailerSettings: React.FC = () => {
                     onChange={() => setNotifications(prev => ({ ...prev, systemUpdates: !prev.systemUpdates }))}
                     className="sr-only peer"
                   />
-                  <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600`}></div>
+                  <div className={`w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-blue-600`}></div>
                 </label>
               </div>
             </div>

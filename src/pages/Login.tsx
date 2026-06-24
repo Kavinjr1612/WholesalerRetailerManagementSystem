@@ -77,16 +77,16 @@ const Login: React.FC = () => {
 
   return (
     <div className={`min-h-screen flex items-center justify-center ${
-      isDarkMode ? 'bg-gray-900' : 'bg-gray-50'
+      isDarkMode ? 'bg-slate-900' : 'bg-slate-50'
     }`}>
       <div className={`max-w-md w-full mx-4 ${
-        isDarkMode ? 'bg-gray-800' : 'bg-white'
+        isDarkMode ? 'bg-slate-800' : 'bg-white'
       } rounded-lg shadow-lg p-8`}>
         <div className="flex justify-center mb-8">
           <div className="flex items-center">
             <Candy size={40} className="text-blue-600" />
             <span className={`ml-3 text-2xl font-bold ${
-              isDarkMode ? 'text-white' : 'text-gray-900'
+              isDarkMode ? 'text-white' : 'text-slate-900'
             }`}>
               {isAdmin ? 'Wholesaler Admin' : 'Retailer Portal'}
             </span>
@@ -107,7 +107,7 @@ const Login: React.FC = () => {
         <form onSubmit={handleLogin} className="space-y-6">
           <div>
             <label className={`block text-sm font-medium ${
-              isDarkMode ? 'text-gray-200' : 'text-gray-700'
+              isDarkMode ? 'text-slate-200' : 'text-slate-700'
             }`}>
               Email
             </label>
@@ -118,15 +118,15 @@ const Login: React.FC = () => {
               required
               className={`mt-1 block w-full rounded-md px-3 py-2 ${
                 isDarkMode 
-                  ? 'bg-gray-700 border-gray-600 text-white' 
-                  : 'border-gray-300 text-gray-900'
+                  ? 'bg-slate-700 border-slate-600 text-white' 
+                  : 'border-slate-300 text-slate-900'
               } border focus:ring-blue-500 focus:border-blue-500`}
             />
           </div>
 
           <div>
             <label className={`block text-sm font-medium ${
-              isDarkMode ? 'text-gray-200' : 'text-gray-700'
+              isDarkMode ? 'text-slate-200' : 'text-slate-700'
             }`}>
               Password
             </label>
@@ -137,8 +137,8 @@ const Login: React.FC = () => {
               required
               className={`mt-1 block w-full rounded-md px-3 py-2 ${
                 isDarkMode 
-                  ? 'bg-gray-700 border-gray-600 text-white' 
-                  : 'border-gray-300 text-gray-900'
+                  ? 'bg-slate-700 border-slate-600 text-white' 
+                  : 'border-slate-300 text-slate-900'
               } border focus:ring-blue-500 focus:border-blue-500`}
             />
           </div>

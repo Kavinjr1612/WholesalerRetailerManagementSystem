@@ -92,12 +92,12 @@ const Sidebar: React.FC = () => {
   return (
     <aside 
       className={`relative ${collapsed ? 'w-16' : 'w-64'} transition-all duration-300 ${
-        isDarkMode ? 'bg-gray-900' : 'bg-white'
-      } border-r ${isDarkMode ? 'border-gray-700/50' : 'border-gray-200/50'}`}
+        isDarkMode ? 'bg-slate-900' : 'bg-white'
+      } border-r ${isDarkMode ? 'border-slate-700/50' : 'border-slate-200/50'}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className={`flex items-center p-4 ${isDarkMode ? 'border-gray-700/50' : 'border-gray-200/50'} border-b`}>
+      <div className={`flex items-center p-4 ${isDarkMode ? 'border-slate-700/50' : 'border-slate-200/50'} border-b`}>
         <div className="w-8 h-8 rounded-full bg-blue-600/20 flex items-center justify-center overflow-hidden">
           <img 
             src="/images/logo.png"
@@ -117,8 +117,8 @@ const Sidebar: React.FC = () => {
                 className={({ isActive }) => 
                   `flex items-center p-3 ${collapsed ? 'justify-center' : 'px-4'} ${
                     isActive 
-                      ? `${isDarkMode ? 'bg-gray-800' : 'bg-blue-50'} text-blue-600` 
-                      : `${isDarkMode ? 'text-gray-400 hover:bg-gray-800' : 'text-gray-600 hover:bg-gray-100'}`
+                      ? `${isDarkMode ? 'bg-slate-800' : 'bg-blue-50'} text-blue-600` 
+                      : `${isDarkMode ? 'text-slate-400 hover:bg-slate-800' : 'text-slate-600 hover:bg-slate-100'}`
                   } rounded-lg transition-colors`
                 }
               >
@@ -135,15 +135,15 @@ const Sidebar: React.FC = () => {
           onClick={toggleLock}
           className={`p-2 rounded-full ${
             isDarkMode 
-              ? 'bg-gray-800 hover:bg-gray-700' 
-              : 'bg-gray-100 hover:bg-gray-200'
+              ? 'bg-slate-800 hover:bg-slate-700' 
+              : 'bg-slate-100 hover:bg-slate-200'
           } transition-colors`}
           title={isLocked ? "Unlock sidebar" : "Lock sidebar"}
         >
           {isLocked ? (
             <Lock size={16} className={`${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
           ) : (
-            <Unlock size={16} className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`} />
+            <Unlock size={16} className={`${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`} />
           )}
         </button>
       </div>

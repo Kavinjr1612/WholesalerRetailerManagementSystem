@@ -280,8 +280,8 @@ const ProfitSharing: React.FC = () => {
             value={selectedRetailer}
             onChange={(e) => setSelectedRetailer(e.target.value)}
             className={`p-2 rounded-md ${
-              isDarkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-900'
-            } border border-gray-300`}
+              isDarkMode ? 'bg-slate-700 text-white' : 'bg-white text-slate-900'
+            } border border-slate-300`}
           >
             <option value="all">All Retailers</option>
             {retailers.map(retailer => (
@@ -294,8 +294,8 @@ const ProfitSharing: React.FC = () => {
               selected={startDate}
               onChange={(date) => setStartDate(date || new Date())}
               className={`p-2 rounded-md ${
-                isDarkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-900'
-              } border border-gray-300`}
+                isDarkMode ? 'bg-slate-700 text-white' : 'bg-white text-slate-900'
+              } border border-slate-300`}
               dateFormat="dd/MM/yyyy"
             />
             <span>to</span>
@@ -303,8 +303,8 @@ const ProfitSharing: React.FC = () => {
               selected={endDate}
               onChange={(date) => setEndDate(date || new Date())}
               className={`p-2 rounded-md ${
-                isDarkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-900'
-              } border border-gray-300`}
+                isDarkMode ? 'bg-slate-700 text-white' : 'bg-white text-slate-900'
+              } border border-slate-300`}
               dateFormat="dd/MM/yyyy"
             />
           </div>
@@ -319,10 +319,10 @@ const ProfitSharing: React.FC = () => {
 
       {/* Overall Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-center">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Total Revenue</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Total Revenue</p>
               <h3 className="text-2xl font-bold">₹{totalStats.revenue.toLocaleString()}</h3>
             </div>
             <div className="p-3 rounded-full bg-blue-100 text-blue-600">
@@ -331,10 +331,10 @@ const ProfitSharing: React.FC = () => {
           </div>
         </div>
 
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-center">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Total Profit</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Total Profit</p>
               <h3 className="text-2xl font-bold">₹{totalStats.profit.toLocaleString()}</h3>
             </div>
             <div className="p-3 rounded-full bg-green-100 text-green-600">
@@ -343,10 +343,10 @@ const ProfitSharing: React.FC = () => {
           </div>
         </div>
 
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-center">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Average Margin</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Average Margin</p>
               <h3 className="text-2xl font-bold">{averageMargin.toFixed(2)}%</h3>
             </div>
             <div className="p-3 rounded-full bg-purple-100 text-purple-600">
@@ -358,7 +358,7 @@ const ProfitSharing: React.FC = () => {
 
       {/* Profit Chart */}
       {selectedRetailer === 'all' && (
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <h2 className="text-lg font-semibold mb-4">Retailer Profit Distribution</h2>
           <div className="h-[400px]">
             <Line data={chartData} options={chartOptions} />
@@ -367,14 +367,14 @@ const ProfitSharing: React.FC = () => {
       )}
 
       {/* Retailer List or Selected Retailer Products */}
-      <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+      <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
         {selectedRetailer === 'all' ? (
           <>
             <h2 className="text-lg font-semibold mb-4">Retailer Performance</h2>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className={`border-b ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+                  <tr className={`border-b ${isDarkMode ? 'border-slate-600' : 'border-slate-200'}`}>
                     <th className="text-left py-3 px-4">Retailer</th>
                     <th className="text-right py-3 px-4">Total Revenue</th>
                     <th className="text-right py-3 px-4">Total Profit</th>
@@ -383,7 +383,7 @@ const ProfitSharing: React.FC = () => {
                 </thead>
                 <tbody>
                   {profitData.map(retailer => (
-                    <tr key={retailer.retailerId} className={`border-b ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+                    <tr key={retailer.retailerId} className={`border-b ${isDarkMode ? 'border-slate-600' : 'border-slate-200'}`}>
                       <td className="py-3 px-4">{retailer.retailerName}</td>
                       <td className="text-right py-3 px-4">₹{retailer.totalRevenue.toLocaleString()}</td>
                       <td className="text-right py-3 px-4">
@@ -415,7 +415,7 @@ const ProfitSharing: React.FC = () => {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className={`border-b ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+                  <tr className={`border-b ${isDarkMode ? 'border-slate-600' : 'border-slate-200'}`}>
                     <th className="text-left py-3 px-4">Product</th>
                     <th className="text-right py-3 px-4">Wholesale Price</th>
                     <th className="text-right py-3 px-4">Retail Price</th>
@@ -427,11 +427,11 @@ const ProfitSharing: React.FC = () => {
                 </thead>
                 <tbody>
                   {selectedRetailerProducts.map(product => (
-                    <tr key={product.productId} className={`border-b ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+                    <tr key={product.productId} className={`border-b ${isDarkMode ? 'border-slate-600' : 'border-slate-200'}`}>
                       <td className="py-3 px-4">
                         <div className="flex items-center">
-                          <div className="w-8 h-8 bg-gray-200 rounded flex items-center justify-center mr-3">
-                            <Package size={16} className="text-gray-400" />
+                          <div className="w-8 h-8 bg-slate-200 rounded flex items-center justify-center mr-3">
+                            <Package size={16} className="text-slate-400" />
                           </div>
                           {product.productName}
                         </div>

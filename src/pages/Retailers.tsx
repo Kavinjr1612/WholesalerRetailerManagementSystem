@@ -296,10 +296,10 @@ const Retailers: React.FC = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className={`pl-10 pr-4 py-2 rounded-lg border ${
-              isDarkMode ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-200'
+              isDarkMode ? 'bg-slate-700 border-slate-600 text-white' : 'bg-white border-slate-200'
             }`}
           />
-          <Search className="absolute left-3 top-2.5 text-gray-400" size={18} />
+          <Search className="absolute left-3 top-2.5 text-slate-400" size={18} />
         </div>
         <button
           onClick={() => setShowAddModal(true)}
@@ -310,10 +310,10 @@ const Retailers: React.FC = () => {
         </button>
       </div>
 
-      <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+      <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
         <table className="w-full">
           <thead>
-            <tr className={`border-b ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+            <tr className={`border-b ${isDarkMode ? 'border-slate-600' : 'border-slate-200'}`}>
               <th className="text-left py-3 px-4">Shop Name</th>
               <th className="text-left py-3 px-4">Contact Person</th>
               <th className="text-left py-3 px-4">Phone</th>
@@ -324,7 +324,7 @@ const Retailers: React.FC = () => {
           </thead>
           <tbody>
             {filteredRetailers.map(retailer => (
-              <tr key={retailer.id} className={`border-b ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+              <tr key={retailer.id} className={`border-b ${isDarkMode ? 'border-slate-600' : 'border-slate-200'}`}>
                 <td className="py-3 px-4">{retailer.name}</td>
                 <td className="py-3 px-4">{retailer.contact_person}</td>
                 <td className="py-3 px-4">{retailer.phone}</td>
@@ -385,7 +385,7 @@ const Retailers: React.FC = () => {
       {/* Add/Edit Modal */}
       {showAddModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className={`p-6 rounded-lg w-full max-w-md ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
+          <div className={`p-6 rounded-lg w-full max-w-md ${isDarkMode ? 'bg-slate-800' : 'bg-white'}`}>
             <h2 className="text-lg font-semibold mb-4">{isEditing ? 'Edit Retailer' : 'Add Retailer'}</h2>
             <form onSubmit={isEditing ? handleEditRetailer : handleAddRetailer}>
               <div className="space-y-4">
@@ -395,7 +395,7 @@ const Retailers: React.FC = () => {
                   placeholder="Shop Name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-white border-slate-200'}`}
                   required
                 />
                 <input
@@ -404,7 +404,7 @@ const Retailers: React.FC = () => {
                   placeholder="Address"
                   value={formData.address}
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                  className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-white border-slate-200'}`}
                   required
                 />
                 <input
@@ -413,7 +413,7 @@ const Retailers: React.FC = () => {
                   placeholder="Contact Person"
                   value={formData.contact_person}
                   onChange={(e) => setFormData({ ...formData, contact_person: e.target.value })}
-                  className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-white border-slate-200'}`}
                   required
                 />
                 <input
@@ -422,7 +422,7 @@ const Retailers: React.FC = () => {
                   placeholder="Phone"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-white border-slate-200'}`}
                   required
                 />
                 <input
@@ -431,7 +431,7 @@ const Retailers: React.FC = () => {
                   placeholder="Email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-white border-slate-200'}`}
                   required
                   disabled={isEditing}
                 />
@@ -442,7 +442,7 @@ const Retailers: React.FC = () => {
                     placeholder="Password"
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                    className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}`}
+                    className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-white border-slate-200'}`}
                     required
                   />
                 )}
@@ -450,7 +450,7 @@ const Retailers: React.FC = () => {
                   name="status"
                   value={formData.status}
                   onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                  className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-white border-slate-200'}`}
                 >
                   <option value="active">Active</option>
                   <option value="inactive">Inactive</option>
@@ -460,7 +460,7 @@ const Retailers: React.FC = () => {
                 <button
                   type="button"
                   onClick={resetForm}
-                  className="mr-2 px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300"
+                  className="mr-2 px-4 py-2 rounded-lg bg-slate-200 hover:bg-slate-300"
                 >
                   Cancel
                 </button>
@@ -479,7 +479,7 @@ const Retailers: React.FC = () => {
       {/* Credentials Modal */}
       {showCredentialsModal && currentRetailer && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className={`p-6 rounded-lg w-full max-w-md ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
+          <div className={`p-6 rounded-lg w-full max-w-md ${isDarkMode ? 'bg-slate-800' : 'bg-white'}`}>
             <h2 className="text-lg font-semibold mb-4">Update Credentials</h2>
             <form onSubmit={handleUpdateCredentials}>
               <div className="space-y-4">
@@ -489,7 +489,7 @@ const Retailers: React.FC = () => {
                     type="email"
                     value={credentialsData.email}
                     onChange={(e) => setCredentialsData({ ...credentialsData, email: e.target.value })}
-                    className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}`}
+                    className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-white border-slate-200'}`}
                     required
                   />
                 </div>
@@ -499,7 +499,7 @@ const Retailers: React.FC = () => {
                     type="password"
                     value={credentialsData.password}
                     onChange={(e) => setCredentialsData({ ...credentialsData, password: e.target.value })}
-                    className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}`}
+                    className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-white border-slate-200'}`}
                     required
                   />
                 </div>
@@ -509,7 +509,7 @@ const Retailers: React.FC = () => {
                     type="password"
                     value={credentialsData.confirmPassword}
                     onChange={(e) => setCredentialsData({ ...credentialsData, confirmPassword: e.target.value })}
-                    className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}`}
+                    className={`w-full px-4 py-2 rounded-lg border ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-white border-slate-200'}`}
                     required
                   />
                 </div>
@@ -521,7 +521,7 @@ const Retailers: React.FC = () => {
                     setShowCredentialsModal(false);
                     setCredentialsData({ email: '', password: '', confirmPassword: '' });
                   }}
-                  className="mr-2 px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300"
+                  className="mr-2 px-4 py-2 rounded-lg bg-slate-200 hover:bg-slate-300"
                 >
                   Cancel
                 </button>
@@ -540,13 +540,13 @@ const Retailers: React.FC = () => {
       {/* Delete Modal */}
       {showDeleteModal && currentRetailer && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className={`p-6 rounded-lg w-full max-w-md ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
+          <div className={`p-6 rounded-lg w-full max-w-md ${isDarkMode ? 'bg-slate-800' : 'bg-white'}`}>
             <h2 className="text-lg font-semibold mb-4">Delete Retailer</h2>
             <p className="mb-6">Are you sure you want to delete {currentRetailer.name}?</p>
             <div className="flex justify-end">
               <button
                 onClick={() => setShowDeleteModal(false)}
-                className="mr-2 px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300"
+                className="mr-2 px-4 py-2 rounded-lg bg-slate-200 hover:bg-slate-300"
               >
                 Cancel
               </button>

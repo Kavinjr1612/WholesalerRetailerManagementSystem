@@ -42,11 +42,11 @@ const RetailerLayout: React.FC = () => {
   }, [navigate]);
   
   return (
-    <div className={`flex h-screen ${isDarkMode ? 'dark bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
+    <div className={`flex h-screen ${isDarkMode ? 'dark bg-slate-900 text-white' : 'bg-slate-50 text-slate-900'}`}>
       <RetailerSidebar />
       <div className="flex flex-col flex-1 overflow-hidden">
         <RetailerHeader />
-        <main className={`flex-1 overflow-y-auto p-4 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
+        <main className={`flex-1 overflow-y-auto p-4 ${isDarkMode ? 'bg-slate-800' : 'bg-slate-100'}`}>
           <Outlet />
         </main>
       </div>

@@ -116,7 +116,7 @@ const RetailerLogin: React.FC = () => {
             <div className="flex items-center mb-6">
               <button
                 onClick={() => setShowForgotPassword(false)}
-                className="text-gray-400 hover:text-white mr-4"
+                className="text-slate-400 hover:text-white mr-4"
               >
                 <ArrowLeft size={20} />
               </button>
@@ -129,7 +129,7 @@ const RetailerLogin: React.FC = () => {
                   <Mail size={48} className="mx-auto mb-4" />
                   <p>Password reset email sent!</p>
                 </div>
-                <p className="text-gray-300 mb-4">
+                <p className="text-slate-300 mb-4">
                   Please check your email for your temporary password.
                 </p>
                 <button
@@ -145,11 +145,11 @@ const RetailerLogin: React.FC = () => {
             ) : (
               <form onSubmit={handleForgotPassword} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-200 mb-2">
+                  <label className="block text-sm font-medium text-slate-200 mb-2">
                     Email Address
                   </label>
                   <div className="relative">
-                    <Mail size={20} className="absolute left-3 top-2.5 text-gray-400" />
+                    <Mail size={20} className="absolute left-3 top-2.5 text-slate-400" />
                     <input
                       type="email"
                       value={email}
@@ -209,17 +209,17 @@ const RetailerLogin: React.FC = () => {
 
             <div className="mb-6 p-4 rounded-md bg-blue-900/40 border border-blue-500/30">
               <h3 className="text-blue-300 font-semibold mb-2 text-sm uppercase tracking-wider">Demo Credentials</h3>
-              <p className="text-gray-300 text-sm mb-1"><span className="text-gray-400">Email:</span> retailer@gmail.com</p>
-              <p className="text-gray-300 text-sm"><span className="text-gray-400">Password:</span> 12345678</p>
+              <p className="text-slate-300 text-sm mb-1"><span className="text-slate-400">Email:</span> retailer@gmail.com</p>
+              <p className="text-slate-300 text-sm"><span className="text-slate-400">Password:</span> 12345678</p>
             </div>
 
             <form onSubmit={handleLogin} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-2">
+                <label className="block text-sm font-medium text-slate-200 mb-2">
                   Email
                 </label>
                 <div className="relative">
-                  <Mail size={20} className="absolute left-3 top-2.5 text-gray-400" />
+                  <Mail size={20} className="absolute left-3 top-2.5 text-slate-400" />
                   <input
                     type="email"
                     value={email}
@@ -232,11 +232,11 @@ const RetailerLogin: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-2">
+                <label className="block text-sm font-medium text-slate-200 mb-2">
                   Password
                 </label>
                 <div className="relative">
-                  <Lock size={20} className="absolute left-3 top-2.5 text-gray-400" />
+                  <Lock size={20} className="absolute left-3 top-2.5 text-slate-400" />
                   <input
                     type={showPassword ? "text" : "password"}
                     value={password}
@@ -248,7 +248,7 @@ const RetailerLogin: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-2.5 text-gray-400 hover:text-gray-300"
+                    className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-300"
                   >
                     {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                   </button>

@@ -519,13 +519,13 @@ const handleDownloadReceipt = () => {
 
       {showBillingModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
-          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'} w-full max-w-md`}>
+          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'} w-full max-w-md`}>
             <h2 className="text-lg font-semibold mb-4">Confirm Billing</h2>
             <div id="receipt" className="space-y-4">
               <div className="text-center">
                 <h3 className="text-xl font-bold">{retailerName}</h3>
-                <p className="text-sm text-gray-500">{retailerAddress}</p>
-                <p className="text-sm text-gray-500">Contact: {retailerPhone}</p>
+                <p className="text-sm text-slate-500">{retailerAddress}</p>
+                <p className="text-sm text-slate-500">Contact: {retailerPhone}</p>
               </div>
 
               <div className="mt-4">
@@ -545,7 +545,7 @@ const handleDownloadReceipt = () => {
                 </div>
               </div>
 
-              <div className="text-center text-sm text-gray-500 mt-4">
+              <div className="text-center text-sm text-slate-500 mt-4">
                 <p>Thank you for your purchase!</p>
                 <p>Date: {new Date().toLocaleDateString()}</p>
               </div>
@@ -553,7 +553,7 @@ const handleDownloadReceipt = () => {
             <div className="mt-6 flex justify-end space-x-4">
               <button
                 onClick={() => setShowBillingModal(false)}
-                className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-md"
+                className="px-4 py-2 bg-slate-500 hover:bg-slate-600 text-white rounded-md"
               >
                 Cancel
               </button>
@@ -569,17 +569,17 @@ const handleDownloadReceipt = () => {
       )}
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className={`${isDarkMode ? 'bg-gray-800' : ''}`}>
+        <TabsList className={`${isDarkMode ? 'bg-slate-800' : ''}`}>
           <TabsTrigger 
             value="billing" 
-            className={`flex items-center ${isDarkMode ? 'data-[state=active]:bg-gray-700' : ''}`}
+            className={`flex items-center ${isDarkMode ? 'data-[state=active]:bg-slate-700' : ''}`}
           >
             <ShoppingCart size={16} className="mr-2" />
             New Billing
           </TabsTrigger>
           <TabsTrigger 
             value="history" 
-            className={`flex items-center ${isDarkMode ? 'data-[state=active]:bg-gray-700' : ''}`}
+            className={`flex items-center ${isDarkMode ? 'data-[state=active]:bg-slate-700' : ''}`}
           >
             <History size={16} className="mr-2" />
             Billing History
@@ -589,16 +589,16 @@ const handleDownloadReceipt = () => {
         <TabsContent value="billing" className="mt-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2">
-              <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+              <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
                 <div className="flex items-center mb-6">
-                  <Search size={20} className={`mr-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`} />
+                  <Search size={20} className={`mr-2 ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`} />
                   <input
                     type="text"
                     placeholder="Search products..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className={`w-full p-2 rounded-md outline-none ${
-                      isDarkMode ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'
+                      isDarkMode ? 'bg-slate-600 text-white' : 'bg-slate-100 text-slate-900'
                     }`}
                   />
                 </div>
@@ -612,10 +612,10 @@ const handleDownloadReceipt = () => {
                     .map(product => (
                       <div
                         key={product.id}
-                        className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}
+                        className={`p-4 rounded-lg ${isDarkMode ? 'bg-slate-600' : 'bg-slate-50'}`}
                       >
                         <div className="flex items-start space-x-4">
-                          <div className="w-24 h-24 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0">
+                          <div className="w-24 h-24 bg-slate-200 rounded-lg overflow-hidden flex-shrink-0">
                             {product.image_url ? (
                               <img
                                 src={product.image_url}
@@ -624,7 +624,7 @@ const handleDownloadReceipt = () => {
                               />
                             ) : (
                               <div className="w-full h-full flex items-center justify-center">
-                                <Package size={32} className="text-gray-400" />
+                                <Package size={32} className="text-slate-400" />
                               </div>
                             )}
                           </div>
@@ -633,10 +633,10 @@ const handleDownloadReceipt = () => {
                               <h3 className="font-medium">{product.name}</h3>
                               <span className="font-bold text-blue-600">₹{product.price.toFixed(2)}</span>
                             </div>
-                            <p className={`text-sm mt-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                            <p className={`text-sm mt-1 ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                               {product.description || 'No description available'}
                             </p>
-                            <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                            <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                               Stock: {product.stock_quantity}
                             </p>
                             <button
@@ -655,13 +655,13 @@ const handleDownloadReceipt = () => {
             </div>
 
             <div>
-              <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+              <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
                 <h2 className="text-lg font-semibold mb-4">Shopping Cart</h2>
 
                 {cart.length === 0 ? (
                   <div className="flex flex-col items-center justify-center py-8">
-                    <ShoppingCart size={48} className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`} />
-                    <p className={`mt-4 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                    <ShoppingCart size={48} className={`${isDarkMode ? 'text-slate-500' : 'text-slate-400'}`} />
+                    <p className={`mt-4 text-center ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                       Your cart is empty
                     </p>
                   </div>
@@ -671,10 +671,10 @@ const handleDownloadReceipt = () => {
                       {cart.map(item => (
                         <div
                           key={item.id}
-                          className={`p-3 rounded ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}
+                          className={`p-3 rounded ${isDarkMode ? 'bg-slate-600' : 'bg-slate-50'}`}
                         >
                           <div className="flex items-start space-x-3">
-                            <div className="w-16 h-16 bg-gray-200 rounded overflow-hidden flex-shrink-0">
+                            <div className="w-16 h-16 bg-slate-200 rounded overflow-hidden flex-shrink-0">
                               {item.image_url ? (
                                 <img
                                   src={item.image_url}
@@ -683,7 +683,7 @@ const handleDownloadReceipt = () => {
                                 />
                               ) : (
                                 <div className="w-full h-full flex items-center justify-center">
-                                  <Package size={24} className="text-gray-400" />
+                                  <Package size={24} className="text-slate-400" />
                                 </div>
                               )}
                             </div>
@@ -697,7 +697,7 @@ const handleDownloadReceipt = () => {
                                   <Trash2 size={16} />
                                 </button>
                               </div>
-                              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                                 ₹{item.price.toFixed(2)} each
                               </p>
                               <div className="mt-2 flex items-center justify-between">
@@ -707,7 +707,7 @@ const handleDownloadReceipt = () => {
                                   onChange={(e) => updateQuantity(item.id, e.target.value)}
                                   min="1"
                                   className={`w-20 p-1 text-center rounded ${
-                                    isDarkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-900'
+                                    isDarkMode ? 'bg-slate-700 text-white' : 'bg-white text-slate-900'
                                   }`}
                                 />
                                 <span className="font-medium">
@@ -720,7 +720,7 @@ const handleDownloadReceipt = () => {
                       ))}
                     </div>
 
-                    <div className={`p-4 rounded ${isDarkMode ? 'bg-gray-600' : 'bg-gray-100'}`}>
+                    <div className={`p-4 rounded ${isDarkMode ? 'bg-slate-600' : 'bg-slate-100'}`}>
                       <div className="flex justify-between items-center text-lg font-bold mb-4">
                         <span>Total</span>
                         <span>₹{calculateTotal().toFixed(2)}</span>
@@ -742,7 +742,7 @@ const handleDownloadReceipt = () => {
         </TabsContent>
 
         <TabsContent value="history" className="mt-6">
-          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-lg font-semibold">Billing History</h2>
               <button
@@ -758,7 +758,7 @@ const handleDownloadReceipt = () => {
               {billings.map(billing => (
                 <div
                   key={billing.id}
-                  className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}
+                  className={`p-4 rounded-lg ${isDarkMode ? 'bg-slate-600' : 'bg-slate-50'}`}
                 >
                   <div 
                     className="flex justify-between items-start cursor-pointer"
@@ -777,7 +777,7 @@ const handleDownloadReceipt = () => {
                           {billing.status}
                         </span>
                       </div>
-                      <div className="flex items-center mt-2 text-sm text-gray-500">
+                      <div className="flex items-center mt-2 text-sm text-slate-500">
                         <Calendar size={14} className="mr-1" />
                         {new Date(billing.billing_date).toLocaleDateString()}
                       </div>
@@ -794,7 +794,7 @@ const handleDownloadReceipt = () => {
                       <div className="space-y-3">
                         {billing.items.map((item) => (
                           <div key={item.id} className="flex items-center space-x-3">
-                            <div className="w-16 h-16 bg-gray-200 rounded overflow-hidden">
+                            <div className="w-16 h-16 bg-slate-200 rounded overflow-hidden">
                               {item.product.image_url ? (
                                 <img
                                   src={item.product.image_url}
@@ -803,13 +803,13 @@ const handleDownloadReceipt = () => {
                                 />
                               ) : (
                                 <div className="w-full h-full flex items-center justify-center">
-                                  <Package size={24} className="text-gray-400" />
+                                  <Package size={24} className="text-slate-400" />
                                 </div>
                               )}
                             </div>
                             <div className="flex-1">
                               <h4 className="font-medium">{item.product.name}</h4>
-                              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                                 Quantity: {item.quantity} × ₹{item.unit_price.toFixed(2)}
                               </p>
                             </div>
@@ -830,7 +830,7 @@ const handleDownloadReceipt = () => {
 
       {showDatePicker && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
-          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'} w-full max-w-md`}>
+          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'} w-full max-w-md`}>
             <h2 className="text-lg font-semibold mb-4">Select Date Range</h2>
             <div className="flex space-x-4 mb-4">
               <button
@@ -838,7 +838,7 @@ const handleDownloadReceipt = () => {
                 className={`px-4 py-2 rounded-md ${
                   dateSelectionMode === 'calendar'
                     ? 'bg-blue-600 text-white'
-                    : 'bg-gray-200 text-gray-700'
+                    : 'bg-slate-200 text-slate-700'
                 }`}
               >
                 By Calendar
@@ -848,7 +848,7 @@ const handleDownloadReceipt = () => {
                 className={`px-4 py-2 rounded-md ${
                   dateSelectionMode === 'manual'
                     ? 'bg-blue-600 text-white'
-                    : 'bg-gray-200 text-gray-700'
+                    : 'bg-slate-200 text-slate-700'
                 }`}
               >
                 By Type
@@ -880,7 +880,7 @@ const handleDownloadReceipt = () => {
                     onChange={(e) => setManualStartDate(e.target.value)}
                     placeholder="DD MM YYYY"
                     className={`p-2 rounded-md outline-none ${
-                      isDarkMode ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'
+                      isDarkMode ? 'bg-slate-600 text-white' : 'bg-slate-100 text-slate-900'
                     }`}
                   />
                 </div>
@@ -895,7 +895,7 @@ const handleDownloadReceipt = () => {
                     onChange={(e) => setManualEndDate(e.target.value)}
                     placeholder="DD MM YYYY"
                     className={`p-2 rounded-md outline-none ${
-                      isDarkMode ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'
+                      isDarkMode ? 'bg-slate-600 text-white' : 'bg-slate-100 text-slate-900'
                     }`}
                   />
                 </div>
@@ -905,7 +905,7 @@ const handleDownloadReceipt = () => {
             <div className="mt-6 flex justify-end space-x-4">
               <button
                 onClick={() => setShowDatePicker(false)}
-                className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-md"
+                className="px-4 py-2 bg-slate-500 hover:bg-slate-600 text-white rounded-md"
               >
                 Cancel
               </button>

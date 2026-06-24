@@ -346,8 +346,8 @@ const RetailerDashboard: React.FC = () => {
               timeFilter === 'day'
                 ? 'bg-blue-600 text-white'
                 : isDarkMode
-                ? 'bg-gray-700 text-gray-200'
-                : 'bg-gray-200 text-gray-700'
+                ? 'bg-slate-700 text-slate-200'
+                : 'bg-slate-200 text-slate-700'
             }`}
           >
             Day
@@ -358,8 +358,8 @@ const RetailerDashboard: React.FC = () => {
               timeFilter === 'week'
                 ? 'bg-blue-600 text-white'
                 : isDarkMode
-                ? 'bg-gray-700 text-gray-200'
-                : 'bg-gray-200 text-gray-700'
+                ? 'bg-slate-700 text-slate-200'
+                : 'bg-slate-200 text-slate-700'
             }`}
           >
             Week
@@ -370,8 +370,8 @@ const RetailerDashboard: React.FC = () => {
               timeFilter === 'month'
                 ? 'bg-blue-600 text-white'
                 : isDarkMode
-                ? 'bg-gray-700 text-gray-200'
-                : 'bg-gray-200 text-gray-700'
+                ? 'bg-slate-700 text-slate-200'
+                : 'bg-slate-200 text-slate-700'
             }`}
           >
             Month
@@ -382,8 +382,8 @@ const RetailerDashboard: React.FC = () => {
               timeFilter === 'custom'
                 ? 'bg-blue-600 text-white'
                 : isDarkMode
-                ? 'bg-gray-700 text-gray-200'
-                : 'bg-gray-200 text-gray-700'
+                ? 'bg-slate-700 text-slate-200'
+                : 'bg-slate-200 text-slate-700'
             }`}
           >
             <Calendar size={16} className="mr-2" />
@@ -399,10 +399,10 @@ const RetailerDashboard: React.FC = () => {
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-center">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Total Sales</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Total Sales</p>
               <h3 className="text-2xl font-bold">₹{stats.totalSales.toLocaleString()}</h3>
               <div className="flex items-center mt-2 text-green-500">
               </div>
@@ -413,10 +413,10 @@ const RetailerDashboard: React.FC = () => {
           </div>
         </div>
 
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-center">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Total Billings</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Total Billings</p>
               <h3 className="text-2xl font-bold">{stats.totalOrders}</h3>
               <div className="flex items-center mt-2 text-green-500">
               </div>
@@ -427,10 +427,10 @@ const RetailerDashboard: React.FC = () => {
           </div>
         </div>
 
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-center">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Total Orders</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Total Orders</p>
               <h3 className="text-2xl font-bold">{stats.totalCustomers}</h3>
             </div>
             <div className="p-3 rounded-full bg-purple-100 text-purple-600">
@@ -439,10 +439,10 @@ const RetailerDashboard: React.FC = () => {
           </div>
         </div>
 
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-center">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Low Stock Items</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Low Stock Items</p>
               <h3 className="text-2xl font-bold">{stats.lowStockItems}</h3>
               <div className="flex items-center mt-2 text-red-500">
                 <AlertTriangle size={16} />
@@ -457,14 +457,14 @@ const RetailerDashboard: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <h2 className="text-lg font-semibold mb-4">Customer Visits</h2>
           <div className="h-[400px]">
             <Line data={customerVisitsChartData} options={customerVisitsOptions} />
           </div>
         </div>
 
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <h2 className="text-lg font-semibold mb-4">Sales & Profit Analysis</h2>
           <div className="h-[400px]">
             <Line data={salesData} options={chartOptions} />
@@ -473,13 +473,13 @@ const RetailerDashboard: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <h2 className="text-lg font-semibold mb-4">Recent Billings</h2>
           <div className="space-y-4">
             {recentBillings.map(billing => (
               <div
                 key={billing.id}
-                className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}
+                className={`p-4 rounded-lg ${isDarkMode ? 'bg-slate-600' : 'bg-slate-50'}`}
               >
                 <div className="flex justify-between items-start">
                   <div>
@@ -495,7 +495,7 @@ const RetailerDashboard: React.FC = () => {
                         {billing.status}
                       </span>
                     </div>
-                    <p className={`text-sm mt-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    <p className={`text-sm mt-1 ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                       {new Date(billing.billing_date).toLocaleDateString()}
                     </p>
                   </div>
@@ -506,18 +506,18 @@ const RetailerDashboard: React.FC = () => {
           </div>
         </div>
 
-        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <h2 className="text-lg font-semibold mb-4">Low Stock Products</h2>
           <div className="space-y-4">
             {lowStockProducts.map(product => (
               <div
                 key={product.id}
-                className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}
+                className={`p-4 rounded-lg ${isDarkMode ? 'bg-slate-600' : 'bg-slate-50'}`}
               >
                 <div className="flex justify-between items-start">
                   <div>
                     <h3 className="font-medium">{product.name}</h3>
-                    <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                       ₹{product.price.toFixed(2)}
                     </p>
                   </div>
@@ -533,7 +533,7 @@ const RetailerDashboard: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <div className="mt-2 w-full bg-gray-200 rounded-full h-2">
+                <div className="mt-2 w-full bg-slate-200 rounded-full h-2">
                   <div
                     className={`h-2 rounded-full ${
                       product.stock_quantity === 0
@@ -553,7 +553,7 @@ const RetailerDashboard: React.FC = () => {
 
       {showDatePicker && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
-          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'} w-full max-w-md`}>
+          <div className={`p-6 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'} w-full max-w-md`}>
             <h2 className="text-lg font-semibold mb-4">Select Date Range</h2>
             <div className="space-y-4">
               <div>
@@ -563,7 +563,7 @@ const RetailerDashboard: React.FC = () => {
                   value={startDate.toISOString().split('T')[0]}
                   onChange={(e) => setStartDate(new Date(e.target.value))}
                   className={`w-full p-2 rounded-md ${
-                    isDarkMode ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'
+                    isDarkMode ? 'bg-slate-600 text-white' : 'bg-slate-100 text-slate-900'
                   }`}
                 />
               </div>
@@ -574,7 +574,7 @@ const RetailerDashboard: React.FC = () => {
                   value={endDate.toISOString().split('T')[0]}
                   onChange={(e) => setEndDate(new Date(e.target.value))}
                   className={`w-full p-2 rounded-md ${
-                    isDarkMode ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'
+                    isDarkMode ? 'bg-slate-600 text-white' : 'bg-slate-100 text-slate-900'
                   }`}
                 />
               </div>
@@ -582,7 +582,7 @@ const RetailerDashboard: React.FC = () => {
             <div className="mt-6 flex justify-end space-x-4">
               <button
                 onClick={() => setShowDatePicker(false)}
-                className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-md"
+                className="px-4 py-2 bg-slate-500 hover:bg-slate-600 text-white rounded-md"
               >
                 Cancel
               </button>

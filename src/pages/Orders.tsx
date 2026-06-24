@@ -487,7 +487,7 @@ const Orders: React.FC = () => {
       case 'completed':
         return `bg-green-100 text-green-800`;
       default:
-        return `bg-gray-100 text-gray-800`;
+        return `bg-slate-100 text-slate-800`;
     }
   };
 
@@ -500,7 +500,7 @@ const Orders: React.FC = () => {
       case 'partial':
         return `bg-amber-100 text-amber-800`;
       default:
-        return `bg-gray-100 text-gray-800`;
+        return `bg-slate-100 text-slate-800`;
     }
   };
 
@@ -607,10 +607,10 @@ ${itemsContent}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-        <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-start">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Total Orders</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Total Orders</p>
               <h3 className="text-2xl font-bold">{orderStats.total}</h3>
             </div>
             <div className="p-2 rounded-full bg-blue-100 text-blue-600">
@@ -619,10 +619,10 @@ ${itemsContent}
           </div>
         </div>
 
-        <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-start">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Pending</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Pending</p>
               <h3 className="text-2xl font-bold">{orderStats.pending}</h3>
             </div>
             <div className="p-2 rounded-full bg-yellow-100 text-yellow-600">
@@ -631,10 +631,10 @@ ${itemsContent}
           </div>
         </div>
 
-        <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-start">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Processing</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Processing</p>
               <h3 className="text-2xl font-bold">{orderStats.processing}</h3>
             </div>
             <div className="p-2 rounded-full bg-blue-100 text-blue-600">
@@ -643,10 +643,10 @@ ${itemsContent}
           </div>
         </div>
 
-        <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-start">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Shipped</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Shipped</p>
               <h3 className="text-2xl font-bold">{orderStats.shipped}</h3>
             </div>
             <div className="p-2 rounded-full bg-purple-100 text-purple-600">
@@ -655,10 +655,10 @@ ${itemsContent}
           </div>
         </div>
 
-        <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+        <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
           <div className="flex justify-between items-start">
             <div>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>Total Value</p>
+              <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>Total Value</p>
               <h3 className="text-2xl font-bold">₹{orderStats.totalValue.toLocaleString()}</h3>
               <div className="flex items-center mt-1 text-green-500 text-xs">
                 <ArrowUpRight size={12} />
@@ -678,30 +678,30 @@ ${itemsContent}
         </div>
       )}
 
-      <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+      <div className={`p-4 rounded-lg shadow-md ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="flex items-center">
-            <Search size={20} className={`mr-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`} />
+            <Search size={20} className={`mr-2 ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`} />
             <input
               type="text"
               placeholder="Search orders..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className={`w-full p-2 rounded-md outline-none ${
-                isDarkMode ? 'bg-gray-600 text-white' : 'bg-gray-100 text-gray-900'
+                isDarkMode ? 'bg-slate-600 text-white' : 'bg-slate-100 text-slate-900'
               }`}
             />
           </div>
 
           <div>
-            <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
               <Filter size={16} className="inline mr-1" /> Status
             </label>
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
               className={`w-full p-2 rounded-md ${
-                isDarkMode ? 'bg-gray-600 text-white border-gray-700' : 'bg-gray-100 text-gray-900 border-gray-200'
+                isDarkMode ? 'bg-slate-600 text-white border-slate-700' : 'bg-slate-100 text-slate-900 border-slate-200'
               }`}
             >
               <option value="all">All Statuses</option>
@@ -713,14 +713,14 @@ ${itemsContent}
           </div>
 
           <div>
-            <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
               <Calendar size={16} className="inline mr-1" /> Date Range
             </label>
             <select
               value={dateFilter}
               onChange={(e) => setDateFilter(e.target.value)}
               className={`w-full p-2 rounded-md ${
-                isDarkMode ? 'bg-gray-600 text-white border-gray-700' : 'bg-gray-100 text-gray-900 border-gray-200'
+                isDarkMode ? 'bg-slate-600 text-white border-slate-700' : 'bg-slate-100 text-slate-900 border-slate-200'
               }`}
             >
               <option value="all">All Time</option>
@@ -733,14 +733,14 @@ ${itemsContent}
         </div>
       </div>
 
-      <div className={`border-b ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+      <div className={`border-b ${isDarkMode ? 'border-slate-700' : 'border-slate-200'}`}>
         <nav className="flex -mb-px">
           <button
             onClick={() => setActiveTab('requests')}
             className={`py-4 px-6 font-medium text-sm border-b-2 ${
               activeTab === 'requests'
                 ? `${isDarkMode ? 'border-blue-500 text-blue-400' : 'border-blue-500 text-blue-600'}`
-                : `${isDarkMode ? 'border-transparent text-gray-400 hover:text-gray-300' : 'border-transparent text-gray-500 hover:text-gray-700'}`
+                : `${isDarkMode ? 'border-transparent text-slate-400 hover:text-slate-300' : 'border-transparent text-slate-500 hover:text-slate-700'}`
             }`}
           >
             <ShoppingBag size={16} className="inline mr-2" />
@@ -751,7 +751,7 @@ ${itemsContent}
             className={`py-4 px-6 font-medium text-sm border-b-2 ${
               activeTab === 'shipments'
                 ? `${isDarkMode ? 'border-blue-500 text-blue-400' : 'border-blue-500 text-blue-600'}`
-                : `${isDarkMode ? 'border-transparent text-gray-400 hover:text-gray-300' : 'border-transparent text-gray-500 hover:text-gray-700'}`
+                : `${isDarkMode ? 'border-transparent text-slate-400 hover:text-slate-300' : 'border-transparent text-slate-500 hover:text-slate-700'}`
             }`}
           >
             <Truck size={16} className="inline mr-2" />
@@ -762,7 +762,7 @@ ${itemsContent}
             className={`py-4 px-6 font-medium text-sm border-b-2 ${
               activeTab === 'history'
                 ? `${isDarkMode ? 'border-blue-500 text-blue-400' : 'border-blue-500 text-blue-600'}`
-                : `${isDarkMode ? 'border-transparent text-gray-400 hover:text-gray-300' : 'border-transparent text-gray-500 hover:text-gray-700'}`
+                : `${isDarkMode ? 'border-transparent text-slate-400 hover:text-slate-300' : 'border-transparent text-slate-500 hover:text-slate-700'}`
             }`}
           >
             <History size={16} className="inline mr-2" />
@@ -773,7 +773,7 @@ ${itemsContent}
             className={`py-4 px-6 font-medium text-sm border-b-2 ${
               activeTab === 'summary'
                 ? `${isDarkMode ? 'border-blue-500 text-blue-400' : 'border-blue-500 text-blue-600'}`
-                : `${isDarkMode ? 'border-transparent text-gray-400 hover:text-gray-300' : 'border-transparent text-gray-500 hover:text-gray-700'}`
+                : `${isDarkMode ? 'border-transparent text-slate-400 hover:text-slate-300' : 'border-transparent text-slate-500 hover:text-slate-700'}`
             }`}
           >
             <FileText size={16} className="inline mr-2" />
@@ -784,10 +784,10 @@ ${itemsContent}
 
       <div>
         {activeTab === 'requests' && (
-          <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+          <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className={`${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+                <thead className={`${isDarkMode ? 'bg-slate-800' : 'bg-slate-50'}`}>
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Order ID</th>
                     <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Retailer</th>
@@ -797,7 +797,7 @@ ${itemsContent}
                     <th className="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider">Actions</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
+                <tbody className="divide-y divide-slate-200 dark:divide-slate-600">
                   {loading ? (
                     <tr>
                       <td colSpan={6} className="px-6 py-4 text-center">
@@ -808,7 +808,7 @@ ${itemsContent}
                     </tr>
                   ) : pendingOrders.length > 0 ? (
                     pendingOrders.map((order) => (
-                      <tr key={order.id} className={`${isDarkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-50'}`}>
+                      <tr key={order.id} className={`${isDarkMode ? 'hover:bg-slate-600' : 'hover:bg-slate-50'}`}>
                         <td className="px-6 py-4 whitespace-nowrap">#{order.id}</td>
                         <td className="px-6 py-4 whitespace-nowrap">{order.retailer?.name}</td>
                         <td className="px-6 py-4 whitespace-nowrap">
@@ -850,9 +850,9 @@ ${itemsContent}
                     <tr>
                       <td colSpan={6} className="px-6 py-4 text-center">
                         <div className="flex flex-col items-center py-6">
-                          <AlertTriangle size={48} className="text-gray-400 mb-4" />
-                          <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-2`}>No pending orders found</p>
-                          <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                          <AlertTriangle size={48} className="text-slate-400 mb-4" />
+                          <p className={`${isDarkMode ? 'text-slate-300' : 'text-slate-600'} mb-2`}>No pending orders found</p>
+                          <p className={`text-sm ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                             All order requests have been processed or no new orders have been placed.
                           </p>
                         </div>
@@ -866,10 +866,10 @@ ${itemsContent}
         )}
 
         {activeTab === 'shipments' && (
-          <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+          <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className={`${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+                <thead className={`${isDarkMode ? 'bg-slate-800' : 'bg-slate-50'}`}>
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Order ID</th>
                     <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Retailer</th>
@@ -879,7 +879,7 @@ ${itemsContent}
                     <th className="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider">Actions</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
+                <tbody className="divide-y divide-slate-200 dark:divide-slate-600">
                   {loading ? (
                     <tr>
                       <td colSpan={6} className="px-6 py-4 text-center">
@@ -890,7 +890,7 @@ ${itemsContent}
                     </tr>
                   ) : processingOrders.length > 0 ? (
                     processingOrders.map((order) => (
-                      <tr key={order.id} className={`${isDarkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-50'}`}>
+                      <tr key={order.id} className={`${isDarkMode ? 'hover:bg-slate-600' : 'hover:bg-slate-50'}`}>
                         <td className="px-6 py-4 whitespace-nowrap">#{order.id}</td>
                         <td className="px-6 py-4 whitespace-nowrap">{order.retailer?.name}</td>
                         <td className="px-6 py-4 whitespace-nowrap">₹{order.total_amount.toLocaleString()}</td>
@@ -948,9 +948,9 @@ ${itemsContent}
                     <tr>
                       <td colSpan={6} className="px-6 py-4 text-center">
                         <div className="flex flex-col items-center py-6">
-                          <AlertTriangle size={48} className="text-gray-400 mb-4" />
-                          <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-2`}>No orders ready for shipment</p>
-                          <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                          <AlertTriangle size={48} className="text-slate-400 mb-4" />
+                          <p className={`${isDarkMode ? 'text-slate-300' : 'text-slate-600'} mb-2`}>No orders ready for shipment</p>
+                          <p className={`text-sm ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                             There are no orders currently being processed or awaiting shipment.
                           </p>
                         </div>
@@ -964,10 +964,10 @@ ${itemsContent}
         )}
 
         {activeTab === 'history' && (
-          <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+          <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className={`${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+                <thead className={`${isDarkMode ? 'bg-slate-800' : 'bg-slate-50'}`}>
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Order ID</th>
                     <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Retailer</th>
@@ -977,7 +977,7 @@ ${itemsContent}
                     <th className="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider">Actions</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
+                <tbody className="divide-y divide-slate-200 dark:divide-slate-600">
                   {loading ? (
                     <tr>
                       <td colSpan={6} className="px-6 py-4 text-center">
@@ -988,7 +988,7 @@ ${itemsContent}
                     </tr>
                   ) : filteredOrders.length > 0 ? (
                     filteredOrders.map((order) => (
-                      <tr key={order.id} className={`${isDarkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-50'}`}>
+                      <tr key={order.id} className={`${isDarkMode ? 'hover:bg-slate-600' : 'hover:bg-slate-50'}`}>
                         <td className="px-6 py-4 whitespace-nowrap">#{order.id}</td>
                         <td className="px-6 py-4 whitespace-nowrap">{order.retailer?.name}</td>
                         <td className="px-6 py-4 whitespace-nowrap">
@@ -1026,9 +1026,9 @@ ${itemsContent}
                     <tr>
                       <td colSpan={6} className="px-6 py-4 text-center">
                         <div className="flex flex-col items-center py-6">
-                          <AlertTriangle size={48} className="text-gray-400 mb-4" />
-                          <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-2`}>No orders found</p>
-                          <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                          <AlertTriangle size={48} className="text-slate-400 mb-4" />
+                          <p className={`${isDarkMode ? 'text-slate-300' : 'text-slate-600'} mb-2`}>No orders found</p>
+                          <p className={`text-sm ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                             Try adjusting your search or filters, or add a new order.
                           </p>
                         </div>
@@ -1043,48 +1043,48 @@ ${itemsContent}
 
         {activeTab === 'summary' && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
-              <div className={`px-6 py-4 border-b ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+            <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
+              <div className={`px-6 py-4 border-b ${isDarkMode ? 'border-slate-600' : 'border-slate-200'}`}>
                 <h2 className="text-lg font-semibold">Order Status Summary</h2>
               </div>
               <div className="p-6">
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between mb-1">
-                      <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Pending Orders</span>
+                      <span className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>Pending Orders</span>
                       <span className="text-sm font-medium">{orderStats.pending}</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
+                    <div className="w-full bg-slate-200 rounded-full h-2.5 dark:bg-slate-600">
                       <div className="bg-yellow-500 h-2.5 rounded-full" style={{ width: `${(orderStats.pending / orderStats.total) * 100}%` }}></div>
                     </div>
                   </div>
 
                   <div>
                     <div className="flex justify-between mb-1">
-                      <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Processing Orders</span>
+                      <span className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>Processing Orders</span>
                       <span className="text-sm font-medium">{orderStats.processing}</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
+                    <div className="w-full bg-slate-200 rounded-full h-2.5 dark:bg-slate-600">
                       <div className="bg-blue-500 h-2.5 rounded-full" style={{ width: `${(orderStats.processing / orderStats.total) * 100}%` }}></div>
                     </div>
                   </div>
 
                   <div>
                     <div className="flex justify-between mb-1">
-                      <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Shipped Orders</span>
+                      <span className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>Shipped Orders</span>
                       <span className="text-sm font-medium">{orderStats.shipped}</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
+                    <div className="w-full bg-slate-200 rounded-full h-2.5 dark:bg-slate-600">
                       <div className="bg-purple-500 h-2.5 rounded-full" style={{ width: `${(orderStats.shipped / orderStats.total) * 100}%` }}></div>
                     </div>
                   </div>
 
                   <div>
                     <div className="flex justify-between mb-1">
-                      <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Completed Orders</span>
+                      <span className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>Completed Orders</span>
                       <span className="text-sm font-medium">{orderStats.completed}</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
+                    <div className="w-full bg-slate-200 rounded-full h-2.5 dark:bg-slate-600">
                       <div className="bg-blue-500 h-2.5 rounded-full" style={{ width: `${(orderStats.completed / orderStats.total) * 100}%` }}></div>
                     </div>
                   </div>
@@ -1092,8 +1092,8 @@ ${itemsContent}
               </div>
             </div>
 
-            <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
-              <div className={`px-6 py-4 border-b ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+            <div className={`rounded-lg shadow-md overflow-hidden ${isDarkMode ? 'bg-slate-700' : 'bg-white'}`}>
+              <div className={`px-6 py-4 border-b ${isDarkMode ? 'border-slate-600' : 'border-slate-200'}`}>
                 <h2 className="text-lg font-semibold">Most Ordered Products</h2>
               </div>
               <div className="p-6">
@@ -1104,16 +1104,16 @@ ${itemsContent}
                 ) : (
                   <div className="space-y-4">
                     {products.slice(0, 5).map((product) => (
-                      <div key={product.id} className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}>
+                      <div key={product.id} className={`p-4 rounded-lg ${isDarkMode ? 'bg-slate-600' : 'bg-slate-50'}`}>
                         <div className="flex justify-between items-center">
                           <div>
                             <h3 className="font-medium">{product.name}</h3>
-                            <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                            <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                               ₹{product.price.toFixed(2)} per unit
                             </p>
                           </div>
                           <div className="text-right">
-                            <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                            <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                               Stock: {product.stock_quantity}
                             </p>
                             {product.stock_quantity < 10 && (
@@ -1135,11 +1135,11 @@ ${itemsContent}
         <div className="fixed inset-0 z-10 overflow-y-auto">
           <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-              <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+              <div className="absolute inset-0 bg-slate-500 opacity-75"></div>
             </div>
 
             <div className={`inline-block align-bottom rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-3xl sm:w-full ${
-              isDarkMode ? 'bg-gray-800' : 'bg-white'
+              isDarkMode ? 'bg-slate-800' : 'bg-white'
             }`}>
               <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="sm:flex sm:items-start">
@@ -1161,8 +1161,8 @@ ${itemsContent}
                               required
                               className={`w-full p-2 border rounded-md ${
                                 isDarkMode 
-                                  ? 'bg-gray-700 border-gray-600 text-white' 
-                                  : 'bg-white border-gray-300'
+                                  ? 'bg-slate-700 border-slate-600 text-white' 
+                                  : 'bg-white border-slate-300'
                               }`}
                             >
                               <option value="">Select Retailer</option>
@@ -1185,8 +1185,8 @@ ${itemsContent}
                               required
                               className={`w-full p-2 border rounded-md ${
                                 isDarkMode 
-                                  ? 'bg-gray-700 border-gray-600 text-white' 
-                                  : 'bg-white border-gray-300'
+                                  ? 'bg-slate-700 border-slate-600 text-white' 
+                                  : 'bg-white border-slate-300'
                               }`}
                             >
                               <option value="pending">Pending</option>
@@ -1207,8 +1207,8 @@ ${itemsContent}
                               required
                               className={`w-full p-2 border rounded-md ${
                                 isDarkMode 
-                                  ? 'bg-gray-700 border-gray-600 text-white' 
-                                  : 'bg-white border-gray-300'
+                                  ? 'bg-slate-700 border-slate-600 text-white' 
+                                  : 'bg-white border-slate-300'
                               }`}
                             >
                               <option value="unpaid">Unpaid</option>
@@ -1234,7 +1234,7 @@ ${itemsContent}
                           {formItems.length > 0 ? (
                             <div className="overflow-x-auto">
                               <table className="w-full">
-                                <thead className={`${isDarkMode ? 'bg-gray-700' : 'bg-gray-50'}`}>
+                                <thead className={`${isDarkMode ? 'bg-slate-700' : 'bg-slate-50'}`}>
                                   <tr>
                                     <th className="px-4 py-2 text-left text-xs font-medium">Product</th>
                                     <th className="px-4 py-2 text-left text-xs font-medium">Quantity</th>
@@ -1245,7 +1245,7 @@ ${itemsContent}
                                 </thead>
                                 <tbody>
                                   {formItems.map((item, index) => (
-                                    <tr key={index} className={`border-b ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+                                    <tr key={index} className={`border-b ${isDarkMode ? 'border-slate-600' : 'border-slate-200'}`}>
                                       <td className="px-4 py-2">
                                         <select
                                           value={item.admin_product_id}
@@ -1253,8 +1253,8 @@ ${itemsContent}
                                           required
                                           className={`w-full p-2 border rounded-md ${
                                             isDarkMode 
-                                              ? 'bg-gray-700 border-gray-600 text-white' 
-                                              : 'bg-white border-gray-300'
+                                              ? 'bg-slate-700 border-slate-600 text-white' 
+                                              : 'bg-white border-slate-300'
                                           }`}
                                         >
                                           <option value="">Select Product</option>
@@ -1274,8 +1274,8 @@ ${itemsContent}
                                           required
                                           className={`w-full p-2 border rounded-md ${
                                             isDarkMode 
-                                              ? 'bg-gray-700 border-gray-600 text-white' 
-                                              : 'bg-white border-gray-300'
+                                              ? 'bg-slate-700 border-slate-600 text-white' 
+                                              : 'bg-white border-slate-300'
                                           }`}
                                         />
                                       </td>
@@ -1289,8 +1289,8 @@ ${itemsContent}
                                           required
                                           className={`w-full p-2 border rounded-md ${
                                             isDarkMode 
-                                              ? 'bg-gray-700 border-gray-600 text-white' 
-                                              : 'bg-white border-gray-300'
+                                              ? 'bg-slate-700 border-slate-600 text-white' 
+                                              : 'bg-white border-slate-300'
                                           }`}
                                         />
                                       </td>
@@ -1308,7 +1308,7 @@ ${itemsContent}
                                       </td>
                                     </tr>
                                   ))}
-                                  <tr className={`font-bold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
+                                  <tr className={`font-bold ${isDarkMode ? 'text-white' : 'text-slate-800'}`}>
                                     <td colSpan={3} className="px-4 py-2 text-right">Total:</td>
                                     <td className="px-4 py-2">₹{calculateTotal().toFixed(2)}</td>
                                     <td></td>
@@ -1317,8 +1317,8 @@ ${itemsContent}
                               </table>
                             </div>
                           ) : (
-                            <div className={`p-4 text-center rounded-md ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                              <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                            <div className={`p-4 text-center rounded-md ${isDarkMode ? 'bg-slate-700' : 'bg-slate-100'}`}>
+                              <p className={`${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
                                 No items added yet. Click "Add Item" to add products to this order.
                               </p>
                             </div>
@@ -1337,8 +1337,8 @@ ${itemsContent}
                             onClick={resetForm}
                             className={`mt-3 w-full inline-flex justify-center rounded-md border shadow-sm px-4 py-2 text-base font-medium focus:outline-none sm:mt-0 sm:w-auto sm:text-sm ${
                               isDarkMode 
-                                ? 'border-gray-600 bg-gray-700 text-gray-300 hover:bg-gray-600' 
-                                : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
+                                ? 'border-slate-600 bg-slate-700 text-slate-300 hover:bg-slate-600' 
+                                : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
                             }`}
                           >
                             Cancel
@@ -1358,11 +1358,11 @@ ${itemsContent}
         <div className="fixed inset-0 z-10 overflow-y-auto">
           <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-              <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+              <div className="absolute inset-0 bg-slate-500 opacity-75"></div>
             </div>
 
             <div className={`inline-block align-bottom rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full ${
-              isDarkMode ? 'bg-gray-800' : 'bg-white'
+              isDarkMode ? 'bg-slate-800' : 'bg-white'
             }`}>
               <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="sm:flex sm:items-start">
@@ -1374,7 +1374,7 @@ ${itemsContent}
                       Delete Order
                     </h3>
                     <div className="mt-2">
-                      <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>
+                      <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>
                         Are you sure you want to delete order #{currentOrder.id} for {currentOrder.retailer?.name}? This action cannot be undone.
                       </p>
                     </div>
@@ -1397,8 +1397,8 @@ ${itemsContent}
                   }}
                   className={`mt-3 w-full inline-flex justify-center rounded-md border shadow-sm px-4 py-2 text-base font-medium focus:outline-none sm:mt-0 sm:w-auto sm:text-sm ${
                     isDarkMode 
-                      ? 'border-gray-600 bg-gray-700 text-gray-300 hover:bg-gray-600' 
-                      : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
+                      ? 'border-slate-600 bg-slate-700 text-slate-300 hover:bg-slate-600' 
+                      : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
                   }`}
                 >
                   Cancel
@@ -1413,11 +1413,11 @@ ${itemsContent}
         <div className="fixed inset-0 z-10 overflow-y-auto">
           <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-              <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+              <div className="absolute inset-0 bg-slate-500 opacity-75"></div>
             </div>
 
             <div className={`inline-block align-bottom rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-3xl sm:w-full ${
-              isDarkMode ? 'bg-gray-800' : 'bg-white'
+              isDarkMode ? 'bg-slate-800' : 'bg-white'
             }`}>
               <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="sm:flex sm:items-start">
@@ -1428,27 +1428,27 @@ ${itemsContent}
                     <div className="mt-4">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <div>
-                          <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>
+                          <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>
                             <strong>Retailer:</strong> {currentOrder.retailer?.name || 'N/A'}
                           </p>
-                          <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>
+                          <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>
                             <strong>Order Date:</strong> {new Date(currentOrder.order_date).toLocaleDateString()}
                           </p>
-                          <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>
+                          <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>
                             <strong>Status:</strong> {currentOrder.status}
                           </p>
-                          <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>
+                          <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>
                             <strong>Payment Status:</strong> {currentOrder.payment_status || 'Not specified'}
                           </p>
                         </div>
                         <div>
-                          <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>
+                          <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>
                             <strong>Total Amount:</strong> ₹{currentOrder.total_amount.toLocaleString()}
                           </p>
-                          <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>
+                          <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>
                             <strong>Created:</strong> {new Date(currentOrder.created_at).toLocaleDateString()}
                           </p>
-                          <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>
+                          <p className={`text-sm ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>
                             <strong>Last Updated:</strong> {currentOrder.updated_at ? new Date(currentOrder.updated_at).toLocaleDateString() : 'N/A'}
                           </p>
                         </div>
@@ -1458,7 +1458,7 @@ ${itemsContent}
                         <h4 className="font-medium mb-2">Order Items</h4>
                         <div className="overflow-x-auto">
                           <table className="w-full">
-                            <thead className={`${isDarkMode ? 'bg-gray-700' : 'bg-gray-50'}`}>
+                            <thead className={`${isDarkMode ? 'bg-slate-700' : 'bg-slate-50'}`}>
                               <tr>
                                 <th className="px-4 py-2 text-left text-xs font-medium">Product</th>
                                 <th className="px-4 py-2 text-left text-xs font-medium">Quantity</th>
@@ -1468,14 +1468,14 @@ ${itemsContent}
                             </thead>
                             <tbody>
                               {orderItems.map((item) => (
-                                <tr key={item.id} className={`border-b ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+                                <tr key={item.id} className={`border-b ${isDarkMode ? 'border-slate-600' : 'border-slate-200'}`}>
                                   <td className="px-4 py-2">{item.product?.name}</td>
                                   <td className="px-4 py-2">{item.quantity}</td>
                                   <td className="px-4 py-2">₹{item.unit_price.toFixed(2)}</td>
                                   <td className="px-4 py-2">₹{(item.quantity * item.unit_price).toFixed(2)}</td>
                                 </tr>
                               ))}
-                              <tr className={`font-bold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
+                              <tr className={`font-bold ${isDarkMode ? 'text-white' : 'text-slate-800'}`}>
                                 <td colSpan={3} className="px-4 py-2 text-right">Total:</td>
                                 <td className="px-4 py-2">₹{currentOrder.total_amount.toFixed(2)}</td>
                               </tr>
@@ -1504,8 +1504,8 @@ ${itemsContent}
                   }}
                   className={`mt-3 w-full inline-flex justify-center rounded-md border shadow-sm px-4 py-2 text-base font-medium focus:outline-none sm:mt-0 sm:w-auto sm:text-sm ${
                     isDarkMode 
-                      ? 'border-gray-600 bg-gray-700 text-gray-300 hover:bg-gray-600' 
-                      : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
+                      ? 'border-slate-600 bg-slate-700 text-slate-300 hover:bg-slate-600' 
+                      : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
                   }`}
                 >
                   Close

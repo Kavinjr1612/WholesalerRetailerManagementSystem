@@ -56,7 +56,7 @@ const PublicRetailerPage: React.FC = () => {
   if (!retailer) {
     return (
       <div className={`flex justify-center items-center h-screen ${
-        isDarkMode ? 'text-gray-200' : 'text-gray-800'
+        isDarkMode ? 'text-slate-200' : 'text-slate-800'
       }`}>
         Retailer not found.
       </div>
@@ -64,11 +64,11 @@ const PublicRetailerPage: React.FC = () => {
   }
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'bg-gray-900 text-gray-200' : 'bg-gray-50 text-gray-800'}`}>
+    <div className={`min-h-screen ${isDarkMode ? 'bg-slate-900 text-slate-200' : 'bg-slate-50 text-slate-800'}`}>
       <div className="max-w-7xl mx-auto p-6">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">{retailer.name}</h1>
-          <div className={`mt-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+          <div className={`mt-2 ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>
             <p>{retailer.address}</p>
             <p>Contact: {retailer.contact_person}</p>
             <p>Phone: {retailer.phone}</p>
@@ -84,25 +84,25 @@ const PublicRetailerPage: React.FC = () => {
           </TabsList>
 
           <TabsContent value="dashboard">
-            <div className={`p-6 rounded-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
+            <div className={`p-6 rounded-lg ${isDarkMode ? 'bg-slate-800' : 'bg-white'} shadow-lg`}>
               <RetailerDashboard />
             </div>
           </TabsContent>
 
           <TabsContent value="products">
-            <div className={`p-6 rounded-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
+            <div className={`p-6 rounded-lg ${isDarkMode ? 'bg-slate-800' : 'bg-white'} shadow-lg`}>
               <RetailerProducts />
             </div>
           </TabsContent>
 
           <TabsContent value="orders">
-            <div className={`p-6 rounded-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
+            <div className={`p-6 rounded-lg ${isDarkMode ? 'bg-slate-800' : 'bg-white'} shadow-lg`}>
               <RetailerOrders />
             </div>
           </TabsContent>
 
           <TabsContent value="billing">
-            <div className={`p-6 rounded-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
+            <div className={`p-6 rounded-lg ${isDarkMode ? 'bg-slate-800' : 'bg-white'} shadow-lg`}>
               <RetailerBilling />
             </div>
           </TabsContent>
