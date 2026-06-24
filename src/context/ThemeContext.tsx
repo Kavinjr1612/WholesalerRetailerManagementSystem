@@ -18,9 +18,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     return savedTheme === 'dark' || 
       (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
   });
-
-  const [themeColor, setThemeColorState] = useState<ThemeColor>('green');
-
+  const [themeColor, setThemeColorState] = useState<ThemeColor>('blue');
   useEffect(() => {
     const fetchUserPreferences = async () => {
       try {
